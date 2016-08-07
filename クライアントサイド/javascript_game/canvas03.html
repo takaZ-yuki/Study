@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Canvas</title>
+        <meta charset="UTF-8">
+    </head>
+    <body onload="init()">
+        
+        <canvas id="canvas" width="600" height="400"></canvas>
+        
+        <script>
+            var ctx;
+            function init() {
+                var canvas = document.getElementById('canvas');
+                ctx = canvas.getContext('2d');
+                ctx.strokeStyle = '#FF0000';
+                ctx.fillStyle = '#00FFFF';
+                ctx.lineWidth = 5;
+
+                // 線を引く 1
+                ctx.fillRect(100, 30, 80, 50);
+                ctx.strokeRect(200, 30, 80, 50);
+                ctx.fillRect(300, 30, 80, 50);
+                ctx.strokeRect(320, 50, 50, 20);
+            }
+        </script>
+    </body>
+</html>

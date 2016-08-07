@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Deth ●× Game</title>
+    <meta charset="UTF-8">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <table border="1" class="main_table" id="maru-batu-field">
+        <thead>
+            <tr>
+                <td colspan="3">Deth ●× Game</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="button-area">
+        <a href="#" id="reset" class="button reset">Reset</a>
+    </div>
+
+    <script src="js/action.js"></script>
+    <script>
+        var count = 0;
+        var maru = '○';
+        var batu = '×';
+        var checkFlag = false;
+
+        window.onload = function() {
+            var table = document.getElementById('maru-batu-field');
+
+            var rows = table.rows;
+            /*
+            * ●×描画
+            * rows.item(0) はヘッダー行の為、1からスタート
+            */
+            for (var i = 1; i < rows.length; i++) {
+                var tr = rows.item(i);
+                for (var j = 0; j < tr.cells.length; j++) {
+                    var td = tr.cells.item(j);
+                    td.onclick = function(event) {
+                        if (!this.innerText && !checkFlag) {
+                            if (count % 2 == 0) {
+                                this.innerText = maru;
+                            } else {
+                                this.innerText = batu;
+                            }
+                            count++;
+                            check(table);
+                        }
+                    }
+                }
+            }
+
+            /*
+            * リセットボタンクリックイベント
+            */
+            reset.addEventListener('click', function() {
+                //rows.item(0) はヘッダー行の為、1からスタート
+                for (var i = 1; i < rows.length; i++) {
+                    var tr = rows.item(i);
+                    for (var j = 0; j < tr.cells.length; j++) {
+                        var td = tr.cells.item(j).innerText = '';
+                    }
+                }
+
+                checkFlag = false;
+                count = 0;
+
+            }, false);
+        }
+
+        /*
+        * ●×上がり判定
+        */
+        function check(table) {
+            var rows = table.rows;
+
+            for (var i = 1; i < rows.length; i++) {
+                if (rows.item(i).cells.item(0).innerText == maru &&
+                    rows.item(i).cells.item(1).innerText == maru &&
+                    rows.item(i).cells.item(2).innerText == maru) {
+                    alert(maru + 'の勝ち');
+                    checkFlag = true;
+                }
+                if (rows.item(i).cells.item(0).innerText == batu &&
+                    rows.item(i).cells.item(1).innerText == batu &&
+                    rows.item(i).cells.item(2).innerText == batu) {
+                    alert(batu + 'の勝ち');
+                    checkFlag = true;
+                }
+            }
+
+            for (var i = 0; i < rows.item(1).cells.length; i++) {
+                if (rows.item(1).cells.item(i).innerText == maru &&
+                    rows.item(2).cells.item(i).innerText == maru &&
+                    rows.item(3).cells.item(i).innerText == maru) {
+                    alert(maru + 'の勝ち');
+                    checkFlag = true;
+                }
+                if (rows.item(1).cells.item(i).innerText == batu &&
+                    rows.item(2).cells.item(i).innerText == batu &&
+                    rows.item(3).cells.item(i).innerText == batu) {
+                    alert(batu + 'の勝ち');
+                    checkFlag = true;
+                }
+            }
+
+            if (rows.item(1).cells.item(0).innerText == maru &&
+                rows.item(2).cells.item(1).innerText == maru &&
+                rows.item(3).cells.item(2).innerText == maru) {
+                alert(maru + 'の勝ち');
+                checkFlag = true;
+            }
+            if (rows.item(1).cells.item(2).innerText == maru &&
+                rows.item(2).cells.item(1).innerText == maru &&
+                rows.item(3).cells.item(0).innerText == maru) {
+                alert(maru + 'の勝ち');
+                checkFlag = true;
+            }
+
+            if (rows.item(1).cells.item(0).innerText == batu &&
+                rows.item(2).cells.item(1).innerText == batu &&
+                rows.item(3).cells.item(2).innerText == batu) {
+                alert(maru + 'の勝ち');
+                checkFlag = true;
+            }
+            if (rows.item(1).cells.item(2).innerText == batu &&
+                rows.item(2).cells.item(1).innerText == batu &&
+                rows.item(3).cells.item(0).innerText == batu) {
+                alert(maru + 'の勝ち');
+                checkFlag = true;
+            }
+        }
+    </script>
+</body>
+
+</html>

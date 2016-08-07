@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Canvas</title>
+        <meta charset="UTF-8">
+    </head>
+    <body onload="init()">
+        
+        <canvas id="canvas" width="600" height="400"></canvas>
+        
+        <script>
+            var ctx;
+            function init() {
+                var canvas = document.getElementById('canvas');
+                ctx = canvas.getContext('2d');
+                ctx.strokeStyle = '#FF0000';
+                ctx.fillStyle = '#00FF00';
+                ctx.lineWidth = 10;
+                ctx.lineCap = 'round';
+                ctx.shadowColor = '#000000';
+                ctx.shadowBlur = 20;
+                
+                // 線を引く
+                ctx.beginPath();
+                ctx.moveTo(100, 100);
+                ctx.lineTo(300, 150);
+                ctx.stroke();
+                
+                // を引く
+                ctx.fillRect(100, 200, 200, 100);
+                ctx.strokeRect(100, 200, 200, 100);
+            }
+        </script>
+    </body>
+</html>

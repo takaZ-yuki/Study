@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="jp">
+
+<head>
+    <title>Grid　レイアウト</title>
+    <meta charset="UTF-8">
+    <link href="css/style.css" rel="stylesheet">
+    <style>
+        .grid3 {
+            background-color: aqua;
+            height: 50px;
+        }
+        .grid5 {
+            background-color: aqua;
+            height: 50px;
+        }
+        .grid4 {
+            background-color: aqua;
+            height: 50px;
+        }
+        .grid9 {
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container clearfix">
+        <div class="grid3 first">3カラム</div>
+        <div class="grid9">
+            <div class="grid3 first">3カラム</div>
+            <div class="grid3">3カラム</div>
+            <div class="grid3">3カラム</div>
+            <div class="grid5 first">5カラム</div>
+            <div class="grid4">4カラム</div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,78 @@
+@import url(https://fonts.googleapis.com/css?family=Indie+Flower|Lobster|Pacifico|Shadows+Into+Light|Orbitron:400,500,900,700|Covered+By+Your+Grace|Gloria+Hallelujah|Montez|Crafty+Girls|Nothing+You+Could+Do|Fontdiner+Swanky|Freckle+Face|Frijole|Caesar+Dressing|Slackey|Creepster|Mountains+of+Christmas:400,700);
+body {
+    font-size: 1.2rem;
+    background-color: black;
+    /*font-family: 'Indie Flower', cursive;
+    font-family: 'Lobster', cursive;
+    font-family: 'Pacifico', cursive;
+    font-family: 'Shadows Into Light', cursive;
+    font-family: 'Orbitron', sans-serif;
+    font-family: 'Covered By Your Grace', cursive;
+    font-family: 'Gloria Hallelujah', cursive;
+    font-family: 'Montez', cursive;
+    font-family: 'Crafty Girls', cursive;
+    font-family: 'Nothing You Could Do', cursive;
+    font-family: 'Fontdiner Swanky', cursive;
+    font-family: 'Freckle Face', cursive;
+    font-family: 'Frijole', cursive;
+    font-family: 'Caesar Dressing', cursive;
+    font-family: 'Slackey', cursive;*/
+    /*font-family: 'Creepster', cursive;*/
+    /*font-family: 'Mountains of Christmas', cursive;*/
+}
+
+.main_table {
+    width: 200px;
+    height: 220px;
+    border: 1px solid lightgray;
+    margin: 0 auto;
+}
+
+.main_table > thead {
+    background-color: lemonchiffon;
+}
+
+.main_table > thead > tr {
+    height: 70px;
+    text-align: center;
+    font-family: 'Creepster', cursive;
+}
+
+.main_table > thead > tr > td {
+    font-size: 1.6rem;
+    width: 50px;
+}
+
+.main_table > tbody {
+    background-color: white;
+}
+
+.main_table > tbody > tr {
+    text-align: center;
+    height: 60px;
+    font-family: 'Fontdiner Swanky', cursive;
+}
+
+.main_table > tbody > tr > td {
+    font-size: 1.6rem;
+    width: 50px;
+}
+
+.button {
+    text-decoration: none;
+    color: black;
+    border: 1px solid white;
+    background-color: lightgray;
+    display: inline-block;
+    margin: 10px;
+    border-radius: 5px;
+    font-family: 'Creepster', cursive;
+}
+
+.button:hover {
+    opacity: 0.8;
+}
+
+.button-area {
+    text-align: center;
+}

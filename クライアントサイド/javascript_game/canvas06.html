@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Canvas</title>
+    <meta charset="UTF-8">
+    <style>
+        #clock {
+            widows: 300px;
+            height: 300px;
+        }
+    </style>
+</head>
+
+<body onload="init()">
+
+    <canvas id="canvas" width="300" height="300"></canvas>
+
+    <script>
+        var ctx, x = 150,
+            y = 150, isOpen = true;
+
+        function gobj(id) {
+            return document.getElementById(id);
+        }
+
+        function init() {
+            var canvas = gobj('canvas');
+            ctx = canvas.getContext('2d');
+            setInterval(tick, 200);
+        }
+        
+        function tick() {
+            isOpen = !isOpen;
+            paint();
+        }
+
+        function paint() {
+            ctx.fillStyle = 'black';
+            ctx.fillRect(0, 0, 300, 300);
+            ctx.fillStyle = 'yellow';
+            ctx.beginPath();
+            ctx.moveTo(x, y);
+            if (isOpen) {
+                ctx.arc(x, y, 30, -Math.PI / 4, Math.PI / 4, true);                
+            } else {
+                ctx.arc(x, y, 30, 0, Math.PI * 2, true);            
+            }
+            ctx.fill();
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <title>HTML</title>
+    <meta charset="UTF-8">
+    <style>
+        .card {
+            width: 80px;
+            height: 80px;
+            background: #616161;
+            border-radius: 4px;
+            margin: 8px;
+            padding: 8px;
+            color: #FAFAFA;
+            cursor: hand;
+        }
+        
+        .cardbox {
+            border: solid 1px #616161;
+            min-width: 128px;
+        }
+    </style>
+    <script src="./js/dnd.js"></script>
+</head>
+<!--TODO: TEST-->
+<body>
+    <table>
+        <tr>
+            <th> state1 </th>
+            <th> state2 </th>
+            <th> state3 </th>
+        </tr>
+        <tr>
+            <td class="cardbox">
+                <div id="card1" class="card" draggable="true">A</div>
+                <div id="card2" class="card" draggable="true">B</div>
+            </td>
+            <td class="cardbox"></td>
+            <td class="cardbox"></td>
+        </tr>
+    </table>
+</body>
+
+</html>
