@@ -66,3 +66,33 @@ main.hs ファイルを作成し、以下の内容を記述してください。
 
 すると、main.exeが作成される。
 
+## パッケージ管理
+
+Haskellにもパッケージ管理ソフトが存在する。
+
+・[cabal](https://www.haskell.org/cabal/)
+
+・[Stack](https://docs.haskellstack.org/en/stable/README/)
+
+cabalはパッケージの依存関係を自動で解決してくれないらしい。
+Stackはその辺をうまく解決してくれるらしいので（TODO:依存関係の辺は後で調べる）
+今回はStackを使用することにする。（Stackも絶賛開発中らしく、どうなるかわからない）
+  
+## Stackのインストール
+サイトからインストーラをダウンロードして実行  
+
+下記コマンドで、バージョンが表示されたらインストール完了
+
+```
+    C:\Users>stack --version
+    Version 1.2.0, Git revision 123819b7d65df2ad7fe63fb5eb39a98536acb5f3 (4055 commits) x86_64 hpack-0.14.0
+```
+
+## Stackでプロジェクトを作成 ⇒ 実行してみよう
+
+①Haskell プロジェクトを作成
+
+```
+    C:\Users>stack new my-project
+    
+```
