@@ -1,0 +1,17 @@
+{
+  "name": "3D",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "yuki <yuki@yuki.yuki>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/takaZ-yuki/Study",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

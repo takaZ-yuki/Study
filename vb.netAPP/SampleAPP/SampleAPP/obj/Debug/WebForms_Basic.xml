@@ -1,0 +1,540 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+SampleAPP
+</name>
+</assembly>
+<members>
+<member name="F:SampleAPP.TwoFactorAuthenticationSignIn.sendcode">
+	<summary>
+sendcode コントロール。
+</summary>
+	<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member><member name="F:SampleAPP.TwoFactorAuthenticationSignIn.Providers">
+	<summary>
+Providers コントロール。
+</summary>
+	<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member><member name="F:SampleAPP.TwoFactorAuthenticationSignIn.ProviderSubmit">
+	<summary>
+ProviderSubmit コントロール。
+</summary>
+	<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member><member name="F:SampleAPP.TwoFactorAuthenticationSignIn.verifycode">
+	<summary>
+verifycode コントロール。
+</summary>
+	<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member><member name="F:SampleAPP.TwoFactorAuthenticationSignIn.SelectedProvider">
+	<summary>
+SelectedProvider コントロール。
+</summary>
+	<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member><member name="F:SampleAPP.TwoFactorAuthenticationSignIn.ErrorMessage">
+	<summary>
+ErrorMessage コントロール。
+</summary>
+	<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member><member name="F:SampleAPP.TwoFactorAuthenticationSignIn.FailureText">
+	<summary>
+FailureText コントロール。
+</summary>
+	<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member><member name="F:SampleAPP.TwoFactorAuthenticationSignIn.Code">
+	<summary>
+Code コントロール。
+</summary>
+	<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member><member name="F:SampleAPP.TwoFactorAuthenticationSignIn.RememberBrowser">
+	<summary>
+RememberBrowser コントロール。
+</summary>
+	<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member><member name="F:SampleAPP.TwoFactorAuthenticationSignIn.CodeSubmit">
+	<summary>
+CodeSubmit コントロール。
+</summary>
+	<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member><member name="F:SampleAPP.ManageLogins.SuccessMessagePlaceholder">
+	<summary>
+SuccessMessagePlaceholder コントロール。
+</summary>
+	<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member><member name="F:SampleAPP.Register.ErrorMessage">
+	<summary>
+ErrorMessage コントロール。
+</summary>
+	<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member><member name="F:SampleAPP.Register.Email">
+	<summary>
+電子メール コントロール。
+</summary>
+	<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member><member name="F:SampleAPP.Register.Password">
+	<summary>
+password コントロール。
+</summary>
+	<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member><member name="F:SampleAPP.Register.ConfirmPassword">
+	<summary>
+confirmPassword コントロール。
+</summary>
+	<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member><member name="F:SampleAPP.ResetPassword.ErrorMessage">
+	<summary>
+ErrorMessage コントロール。
+</summary>
+	<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member><member name="F:SampleAPP.ResetPassword.Email">
+	<summary>
+電子メール コントロール。
+</summary>
+	<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member><member name="F:SampleAPP.ResetPassword.Password">
+	<summary>
+password コントロール。
+</summary>
+	<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member><member name="F:SampleAPP.ResetPassword.ConfirmPassword">
+	<summary>
+confirmPassword コントロール。
+</summary>
+	<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member><member name="F:SampleAPP.OpenAuthProviders.providerDetails">
+	<summary>
+providerDetails コントロール。
+</summary>
+	<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member><member name="F:SampleAPP.ManagePassword.setPassword">
+	<summary>
+setPassword コントロール。
+</summary>
+	<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member><member name="F:SampleAPP.ManagePassword.password">
+	<summary>
+password コントロール。
+</summary>
+	<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member><member name="F:SampleAPP.ManagePassword.confirmPassword">
+	<summary>
+confirmPassword コントロール。
+</summary>
+	<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member><member name="F:SampleAPP.ManagePassword.changePasswordHolder">
+	<summary>
+changePasswordHolder コントロール。
+</summary>
+	<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member><member name="F:SampleAPP.ManagePassword.CurrentPasswordLabel">
+	<summary>
+CurrentPasswordLabel コントロール。
+</summary>
+	<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member><member name="F:SampleAPP.ManagePassword.CurrentPassword">
+	<summary>
+CurrentPassword コントロール。
+</summary>
+	<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member><member name="F:SampleAPP.ManagePassword.NewPasswordLabel">
+	<summary>
+NewPasswordLabel コントロール。
+</summary>
+	<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member><member name="F:SampleAPP.ManagePassword.NewPassword">
+	<summary>
+NewPassword コントロール。
+</summary>
+	<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member><member name="F:SampleAPP.ManagePassword.ConfirmNewPasswordLabel">
+	<summary>
+ConfirmNewPasswordLabel コントロール。
+</summary>
+	<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member><member name="F:SampleAPP.ManagePassword.ConfirmNewPassword">
+	<summary>
+ConfirmNewPassword コントロール。
+</summary>
+	<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member><member name="F:SampleAPP.Manage.SuccessMessagePlaceHolder">
+	<summary>
+ SuccessMessagePlaceHolder コントロール。
+ </summary>
+	<remarks>
+ 自動生成されたフィールド。
+ 変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+ </remarks>
+</member><member name="F:SampleAPP.Manage.ChangePassword">
+	<summary>
+ ChangePassword コントロール。
+ </summary>
+	<remarks>
+ 自動生成されたフィールド。
+ 変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+ </remarks>
+</member><member name="F:SampleAPP.Manage.CreatePassword">
+	<summary>
+ CreatePassword コントロール。
+ </summary>
+	<remarks>
+ 自動生成されたフィールド。
+ 変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+ </remarks>
+</member><member name="F:SampleAPP.Manage.PhoneNumber">
+	<summary>
+ PhoneNumber コントロール。
+ </summary>
+	<remarks>
+ 自動生成されたフィールド。
+ 変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+ </remarks>
+</member><member name="F:SampleAPP.AddPhoneNumber.ErrorMessage">
+	<summary>
+ErrorMessage コントロール。
+</summary>
+	<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member><member name="F:SampleAPP.AddPhoneNumber.PhoneNumber">
+	<summary>
+PhoneNumber コントロール。
+</summary>
+	<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member><member name="F:SampleAPP.RegisterExternalLogin.email">
+	<summary>
+電子メール コントロール。
+</summary>
+	<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member><member name="F:SampleAPP.Confirm.successPanel">
+	<summary>
+successPanel コントロール。
+</summary>
+	<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member><member name="F:SampleAPP.Confirm.login">
+	<summary>
+login コントロール。
+</summary>
+	<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member><member name="F:SampleAPP.Confirm.errorPanel">
+	<summary>
+errorPanel コントロール。
+</summary>
+	<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member><member name="F:SampleAPP.ForgotPassword.loginForm">
+	<summary>
+loginForm コントロール。
+</summary>
+	<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member><member name="F:SampleAPP.ForgotPassword.ErrorMessage">
+	<summary>
+ErrorMessage コントロール。
+</summary>
+	<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member><member name="F:SampleAPP.ForgotPassword.FailureText">
+	<summary>
+FailureText コントロール。
+</summary>
+	<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member><member name="F:SampleAPP.ForgotPassword.Email">
+	<summary>
+Email コントロール。
+</summary>
+	<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member><member name="F:SampleAPP.ForgotPassword.DisplayEmail">
+	<summary>
+DisplayEmail コントロール。
+</summary>
+	<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member><member name="F:SampleAPP.Login.ErrorMessage">
+	<summary>
+ErrorMessage コントロール。
+</summary>
+	<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member><member name="F:SampleAPP.Login.FailureText">
+	<summary>
+FailureText コントロール。
+</summary>
+	<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member><member name="F:SampleAPP.Login.Email">
+	<summary>
+電子メール コントロール。
+</summary>
+	<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member><member name="F:SampleAPP.Login.Password">
+	<summary>
+password コントロール。
+</summary>
+	<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member><member name="F:SampleAPP.Login.RememberMe">
+	<summary>
+RememberMe コントロール。
+</summary>
+	<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member><member name="F:SampleAPP.Login.RegisterHyperLink">
+	<summary>
+RegisterHyperLink コントロール。
+</summary>
+	<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member><member name="F:SampleAPP.Login.OpenAuthLogin">
+	<summary>
+OpenAuthLogin コントロール。
+</summary>
+	<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member><member name="F:SampleAPP.VerifyPhoneNumber.ErrorMessage">
+	<summary>
+ErrorMessage コントロール。
+</summary>
+	<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member><member name="F:SampleAPP.VerifyPhoneNumber.PhoneNumber">
+	<summary>
+PhoneNumber コントロール。
+</summary>
+	<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member><member name="F:SampleAPP.VerifyPhoneNumber.Code">
+	<summary>
+Code コントロール。
+</summary>
+	<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member><member name="F:SampleAPP.ResetPasswordConfirmation.login">
+	<summary>
+login コントロール。
+</summary>
+	<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member><member name="F:SampleAPP.SiteMaster.MainContent">
+	<summary>
+MainContent コントロール。
+</summary>
+	<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member><member name="P:SampleAPP.My.MyWebExtension.Computer">
+	<summary>
+ ホスト コンピューターに関する情報を返します。
+ </summary>
+</member><member name="P:SampleAPP.My.MyWebExtension.User">
+	<summary>
+ 現在の Web ユーザーに関する情報を返します。
+ </summary>
+</member><member name="P:SampleAPP.My.MyWebExtension.Request">
+	<summary>
+ Request オブジェクトを返します。
+ </summary>
+</member><member name="P:SampleAPP.My.MyWebExtension.Response">
+	<summary>
+ Response オブジェクトを返します。
+ </summary>
+</member><member name="P:SampleAPP.My.MyWebExtension.Log">
+	<summary>
+ Asp ログ オブジェクトを返します。
+ </summary>
+</member><member name="T:SampleAPP.My.MyWebExtension">
+	<summary>
+ Web プロジェクトの My Namespace で使用できるプロパティを定義するためのモジュール。
+ </summary>
+	<remarks></remarks>
+</member><member name="F:SampleAPP.Site_Mobile.Head1">
+	<summary>
+Head1 コントロール。
+</summary>
+	<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member><member name="F:SampleAPP.Site_Mobile.HeadContent">
+	<summary>
+HeadContent コントロール。
+</summary>
+	<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member><member name="F:SampleAPP.Site_Mobile.form1">
+	<summary>
+form1 コントロール。
+</summary>
+	<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member><member name="F:SampleAPP.Site_Mobile.FeaturedContent">
+	<summary>
+FeaturedContent コントロール。
+</summary>
+	<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member><member name="F:SampleAPP.Site_Mobile.MainContent">
+	<summary>
+MainContent コントロール。
+</summary>
+	<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member><member name="F:SampleAPP.Site_Mobile.ViewSwitcher1">
+	<summary>
+ViewSwitcher1 コントロール。
+</summary>
+	<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+</members>
+</doc>

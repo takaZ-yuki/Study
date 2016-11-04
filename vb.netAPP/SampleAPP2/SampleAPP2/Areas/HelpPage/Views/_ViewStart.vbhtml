@@ -1,0 +1,4 @@
+﻿@Code
+    ' Layout パスを下で変更し、ヘルプ ページの外観を既存の Web ページと調和させます
+    Layout = "~/Views/Shared/_Layout.vbhtml"
+End Code
