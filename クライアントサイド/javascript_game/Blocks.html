@@ -103,8 +103,10 @@
             switch (code) {
                 case 37:
                     paddle.keyL = flag;
+                    break;
                 case 39:
                     paddle.keyR = flag;
+                    break;
                 case 32:
                     if (!isPlaying()) {
                         ball.x = paddle.x + paddle.w / 2;
