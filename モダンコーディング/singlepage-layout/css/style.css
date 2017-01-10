@@ -113,7 +113,7 @@ body {
     padding: 80px 0;
 }
 
-.works-wrappe {
+.works-wrapper {
     display: table;
     width: 100%;
     margin-top: 60px;
@@ -258,9 +258,9 @@ body {
     margin-bottom: 10px;
     padding: 15px;
     outline: none;
-    border: 1px solid rgba(255,255,255,0.4);
+    border: 1px solid rgba(255, 255, 255, 0.4);
     border-radius: 0;
-    background-color: rgba(255,255,255,0.05);
+    background-color: rgba(255, 255, 255, 0.05);
     color: #fff;
 }
 
@@ -278,18 +278,92 @@ body {
     width: 200px;
     margin: 40px auto 0;
     padding: 15px;
-    border: 1px solid rgba(255,255,255,0.6);
+    border: 1px solid rgba(255, 255, 255, 0.6);
     border-radius: 5px;
     background-color: transparent;
-    color: rgba(255,255,255,0.6);
+    color: rgba(255, 255, 255, 0.6);
     cursor: pointer;
 }
 
 .contact-form input[type=submit]:hover {
-    background-color: rgba(255,255,255,0.05);
+    background-color: rgba(255, 255, 255, 0.05);
 }
 
 .footer {
     padding: 12px 0;
     font-size: 1.3rem;
+}
+
+@media (max-width: 768px) {
+    .body {
+        font-size: 1.3rem;
+    }
+    /*
+     * ヘッダ
+     */
+    .site-title-sub {
+        font-size: 1.7rem;
+    }
+    .site-title-sub::before,
+    .site-title-sub::after {
+        display: block;
+        width: 80%;
+        margin: 10px auto;
+    }
+    .site-title {
+        margin-top: 35px;
+        font-size: 5rem;
+    }
+    .header {
+        padding-top: 60px;
+    }
+    .button:hover {
+        opacity: 1;
+    }
+    /*
+     * セクション１
+     */
+    .heading {
+        font-size: 2.5rem;
+    }
+    .about-text {
+        line-height: 1.8;
+    }
+    /*
+     * セクション２
+     */
+    .works-wrapper,
+    .work-box {
+        display: block;
+    }
+    .work-image {
+        display: none;
+    }
+    .work-description {
+        position: relative;
+    }
+    .work-box::after {
+        top: 0;
+        height: 100%;
+        background-color: cover;
+    }
+    /*
+     * セクション３
+     */
+    .skills-wrapper,
+    .skill-box {
+        display: block;
+    }
+    .skill-icon {
+        width: 100px;
+        height: 100px;
+        font-size: 5rem;
+        line-height: 92px;
+    }
+    .skill-box {
+        margin: 40px auto;
+    }
+    .skill-text {
+        margin: 0;
+    }
 }
