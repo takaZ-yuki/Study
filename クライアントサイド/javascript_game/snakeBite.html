@@ -8,7 +8,6 @@
 </head>
 
 <body onload="init()">
-
     <canvas id="field" width="400" height="400" style="background:#cccccc;"></canvas>
     <script>
         var W, H, S = 20;
@@ -70,7 +69,7 @@
         }
 
         function moveFood(x, y) {
-            foods = foods.filter(function(p) {
+            foods = foods.filter(function (p) {
                 return (p.x != x || p.y != y);
             });
             addFood();
@@ -124,11 +123,11 @@
             ctx.fillText(point, S, S * 2);
             ctx.fillStyle = 'rgb(0, 0, 255)';
 
-            foods.forEach(function(p) {
+            foods.forEach(function (p) {
                 ctx.fillText('+', p.x * S, (p.y + 1) * S);
             });
 
-            snake.forEach(function(p) {
+            snake.forEach(function (p) {
                 ctx.fillText('*', p.x * S, (p.y + 1) * S);
             });
         }
