@@ -7,5 +7,4 @@ const World = () => {
     );
 }
 
-// export defaultについて調べる
 export default World;

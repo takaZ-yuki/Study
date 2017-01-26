@@ -1,5 +1,4 @@
 // src/components/hello.jsx
-//todo: importとCompornentとfromを調べる
 import React, { Component } from 'react';
 
 export default class Hello extends Component {
