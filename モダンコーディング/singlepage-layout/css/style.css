@@ -89,6 +89,8 @@ body {
     font-size: 4rem;
 }
 
+
+/*
 .heading::before,
 .heading::after {
     content: '';
@@ -101,6 +103,28 @@ body {
 
 .heading::before {
     bottom: 5px;
+}
+*/
+
+.heading::before,
+.heading::after {
+    content: '';
+    display: inline-block;
+    margin: 5px 10px;
+    width: 15px;
+    height: 15px;
+    border: 1px solid black;
+    transform: rotate(-45deg);
+}
+
+.works>.heading::before,
+.works>.heading::after {
+    border: 1px solid white;
+}
+
+.contact>.heading::before,
+.contact>.heading::after {
+    border: 1px solid white;
 }
 
 .about-text {
@@ -167,6 +191,20 @@ body {
     display: block;
     width: 100%;
     margin: 0 0 60%;
+}
+
+.work-box {
+    overflow: hidden;
+}
+
+.work-box img {
+    transition: -webkit-transform 0.5s ease-in-out;
+    transition: transform 0.5s ease-in-out;
+}
+
+.work-box:hover img {
+    -webkit-transition: scale(1.1);
+    transform: scale(1.1);
 }
 
 .work-description {
@@ -294,7 +332,17 @@ body {
     font-size: 1.3rem;
 }
 
+@media (max-width: 1024px) {
+    .contact {
+        padding-bottom: 80px;
+    }
+    .contact-form {
+        width: 80%;
+    }
+}
+
 @media (max-width: 768px) {
+    /* スマートフォンと縦向きのタブレット用のスタイル */
     .body {
         font-size: 1.3rem;
     }
