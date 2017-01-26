@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <style>
+    .messageLog {
+      width: 200px;
+      height: 200px;
+      overflow: scroll;
+      float: left;
+    }
+  </style>
+</head>
+<body>
+  <h1>チャネルメッセージングのサンプル</h1>
+  <input type="text" id="msg">
+  <button onclick="showMsg()">送信</button>
+  <button onclick="addDisplay()">表示エリア追加</button>
+  <div id="messageLogs"></div>
+  <script>
+    // チャネルを生成
+    var channel = new MessageChannel();
+    // ポートを利用可能にする。
+    channel.port1.start();
+    channel.port2.start();
+
+    // 「表示エリア追加」ボタン押下時の処理
+    function addDisplay () {
+      // div生成
+      var div = document.createElement('div');
+      div.className = 'messageLog';
+      document.getElementById('messageLogs').appendChild(div);
+
+      // port2にイベントハンドラを追加
+      channel.port2.addEventListener('message', function (e) {
+        div.innerHTML += '<div>' + e.data + '</div>';
+      }, false);
+    }
+
+    // 「送信」ボタン押下時の処理
+    function showMsg () {
+      var msg = document.getElementById('msg').value;
+      // port1にイベントハンドラを追加
+      channel.port1.postMessage(msg);
+    }
+  </script>
+</body>
+</html>

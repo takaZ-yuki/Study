@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HTML5 学習</title>
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <header>
+      <h2>HTML5</h2>
+    </header>
+
+    <section>
+      <h3>CANVAS1
+      <br>
+      <canvas id="canvas1" width="300" height="400"></canvas>
+    </section>
+
+    <section>
+      <h3>CANVAS2
+      <br>
+      <canvas id="canvas2" width="300" height="400"></canvas>
+    </section>
+
+    <section>
+      <h3>CANVAS3
+      <br>
+      <canvas id="canvas3" width="300" height="400"></canvas>
+    </section>
+
+    <section>
+      <h3>CANVAS4
+      <br>
+      <canvas id="canvas4" width="300" height="400"></canvas>
+    </section>
+
+    <section>
+      <h3>CANVAS5
+      <br>
+      <canvas id="canvas5" width="300" height="400"></canvas>
+    </section>
+
+    <section>
+      <h3>CANVAS6
+      <br>
+      <canvas id="canvas6" width="300" height="400"></canvas>
+    </section>
+
+    <section>
+      <h3>CANVAS7
+      <br>
+      <canvas id="canvas7" width="300" height="400"></canvas>
+    </section>
+
+    <section>
+      <h3>CANVAS8
+      <br>
+      <canvas id="canvas8" width="300" height="400"></canvas>
+    </section>
+
+    <footer>
+
+    </footer>
+      <script>
+        /**
+         * 円が開いたり閉じたり
+         */
+        var p = 0;
+        var h = false;
+        setInterval(function(){
+          var canvas7 = document.getElementById('canvas7');
+          var cx7 = canvas7.getContext('2d');
+          cx7.clearRect(0, 0, canvas6.width, canvas6.height);
+          cx7.beginPath();
+          // (50, 50)を扇形の中心とする。
+          cx7.moveTo(50, 50);
+          // 扇形の円弧を描画。中心から円弧の始点までの直線は自動的に引かれる。
+          cx7.arc(50, 50 ,25, 0, p, h);
+          cx7.closePath();
+          cx7.stroke();
+
+          p += 0.003;
+          if(p > 6.200){
+            p = 0;
+            h = !h;
+          }
+        },1);
+
+        /**
+         * ボール動かし丸
+         *
+         */
+        var x = 25;
+        var y = 25;
+        var xv = 0.4;
+        var yv = 0.4;
+        setInterval(function(){
+          var canvas8 = document.getElementById('canvas8');
+          var cx8 = canvas8.getContext('2d');
+          cx8.clearRect(0, 0, canvas8.width, canvas8.height);
+          cx8.beginPath();
+          // 時計周りで円弧を描画
+          cx8.arc(x, y ,25, 0, 2 * Math.PI, true);
+          cx8.stroke();
+
+          x += xv;
+          y += yv;
+
+          if (x >= (canvas8.width - 25) || x <= 25 ) {
+            xv *= -1;
+          }
+
+          if (y >= (canvas8.height - 25) || y <= 25 ) {
+            yv *= -1;
+          }
+
+        },1);
+
+
+        window.onload = function() {
+          // canvas要素のDOMオブジェクトを取得
+          var canvas = document.getElementById('canvas1');
+          // 描画コンテキストを取得する。
+          var cx = canvas.getContext('2d');
+          // パスをリセット
+          cx.beginPath();
+          // キャンパスの原点に移動
+          cx.moveTo(0, 0);
+          // 対角線を描画
+          cx.lineTo(canvas.width, canvas.height);
+          // 線を書き出し
+          cx.stroke();
+
+          // 曲線を描く
+          var canvas2 = document.getElementById('canvas2');
+          var cx2 = canvas2.getContext('2d');
+          cx2.beginPath();
+          cx2.moveTo(0, 0);
+          // ペジェ曲線を描画 X, Y, radius, startAngle, endAngle, anticlockwies
+          cx2.quadraticCurveTo(50, 100, 100, 0);
+          cx2.moveTo(0, 0);
+          cx2.lineTo(50,100);
+          cx2.moveTo(100, 0);
+          cx2.lineTo(50,100);
+          cx2.stroke();
+
+          var canvas3 = document.getElementById('canvas3');
+          var cx3 = canvas3.getContext('2d');
+          cx3.beginPath();
+          cx3.moveTo(0, 0);
+          // 直線と円弧を描画
+          cx3.bezierCurveTo(0, 100, 100, 0, 100, 100);
+          cx3.stroke();
+
+          var canvas4 = document.getElementById('canvas4');
+          var cx4 = canvas4.getContext('2d');
+          cx4.beginPath();
+          // 時計周りで円弧を描画
+          cx4.arc(50, 50 ,25, 0, 90 * Math.PI / 180, false);
+          cx4.stroke();
+
+
+          var canvas5 = document.getElementById('canvas5');
+          var cx5 = canvas5.getContext('2d');
+          cx5.beginPath();
+          // 半径25ピクセルの円を描画
+          cx5.arc(50, 50 ,25, 0, 2 * Math.PI, true);
+          cx5.stroke();
+
+          var canvas6 = document.getElementById('canvas6');
+          var cx6 = canvas6.getContext('2d');
+          cx6.clearRect(0, 0, canvas6.width, canvas6.height);
+          cx6.beginPath();
+          // (50, 50)を扇形の中心とする。
+          cx6.moveTo(50, 50);
+          // 扇形の円弧を描画。中心から円弧の始点までの直線は自動的に引かれる。
+          cx6.arc(50, 50 ,25, 0, 90 * Math.PI / 180, false);
+          cx6.closePath();
+          cx6.stroke();
+
+        }
+      </script>
+  </body>
+</html>

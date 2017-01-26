@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>ポート公開のサンプル</title>
+</head>
+<body>
+  <script>
+    var ports = [];
+    // メッセージの受信用ハンドラ
+    onmessage = function (e) {
+    // メッセージに含まれるポートをportsに保持
+      for (var i = 0; i < e.ports.length; i++) {
+        ports.push(e.ports[i]);
+      }
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+■SublimeText 3 ショートカットキー
+
+・テキスト検索
+　→ Ctrl + f
+
+・テキスト置換
+　→ Ctrl + h
+
+・Grep検索
+　→ Ctrl + Shift + f
+
+・メソッド/関数検索
+　→ Ctrl + r
+
+・矩形選択（マウス操作の場合）
+　→ Shift + 右ドラッグ
+
+・矩形選択（キー操作の場合） 
+　→ Ctrl + Alt + ↑ or ↓
+
+・入力保管
+　→ Ctrl + Space
+
+・行移動
+　→ Ctrl + Shift + ↑ or ↓
+
+・行コピー
+　→ Ctrl + Shift + d
+
+・大文字 → 小文字に変換
+　→ Ctrl + k -> u
+
+・小文字 → 大文字に変換
+　→ Ctrl + k -> l
+
+・辞書の順番で行ソート
+　→ F9
+
+・辞書の順番で行ソート（大文字、小文字を考慮）
+　→ Ctrl + F9
+
+・タブ移動
+　→ Ctrl + PageUp or PageDown
+
+・現在のタブを閉じる
+　→ Ctrl + w
+
+・新しいファイルを作成する
+　→ Ctrl + n
+
+・上書き保存
+　→ Ctrl + s
+
+・名前を指定して保存
+　→ Ctrl + Shift + s
+
+・ファイル検索
+　→ Ctrl + p
+
+・ウインドウ左右分割
+　→ Alt + Shift + 2～4
+
+・ウインドウ上下左右分割
+　→ Alt + Shift + 5
+
+・ウインドウフォーカス移動
+　→ Ctrl + <ウィンドウ番号>
+
+参考URL：
+・http://liginc.co.jp/designer/archives/6774
+
+
+
+
+
+
+
+
+

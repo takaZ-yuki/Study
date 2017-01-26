@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title></title>
+    <script>
+      var MYORIGIN = location.protocol + '//' + location.host;
+      // メッセージを受信
+      window.addEventListener('message', function (e) {
+        // 送信元のオリジンをチェック
+        if (e.origin == MYORIGIN) {
+          document.body.innerHTML = '<div>' + e.data.date + '送信された値は[' + e.data.number + ']でした。';
+
+        }
+      }, false);
+    </script>
+</head>
+<body>
+</body>
+</html>

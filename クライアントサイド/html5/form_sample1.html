@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HTML5 学習</title>
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style>
+      .box {
+        clear: both;
+        height: 30px;
+      }
+      .box > div {
+        float: left;
+        width: 120px;
+        text-align: right;
+      }
+      .box input {
+        float: left;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h2>HTML5</h2>
+    </header>
+
+    <section>
+      <h2>フォーム要素</h2>
+      <form onsubmit="return false">
+        <div class="box">
+          <div>search : </div><input type="search" required>
+        </div>
+        <div class="box">
+          <div>telephone : </div><input type="tel" required>
+        </div>
+        <div class="box">
+          <div>url : </div><input type="url" required>
+        </div>
+        <div class="box">
+          <div>email : </div><input type="email" required>
+        </div>
+        <div class="box">
+          <div>datetime : </div><input type="datetime" required>
+        </div>
+        <div class="box">
+          <div>date : </div><input type="date" min="2010-04-01" max="2015-10-31" step="2" required>
+        </div>
+        <div class="box">
+          <div>datetime-local : </div><input type="datetime-local" required>
+        </div>
+        <div class="box">
+          <div>month : </div><input type="month" required>
+        </div>
+        <div class="box">
+          <div>week : </div><input type="week" required>
+        </div>
+        <div class="box">
+          <div>time : </div><input type="time" required>
+        </div>
+        <div class="box">
+          <div>number : </div><input type="number" step="1" required>
+        </div>
+        <div class="box">
+          <div>range : </div><input type="range" required>
+        </div>
+        <div class="box">
+          <div>color : </div><input type="color" required>
+        </div>
+        <div class="box">
+          <div>file : </div><input type="file" multiple accept="text/plain" required>
+        </div>
+        <div class="box">
+          <div>password : </div><input type="password" required>
+        </div>
+        <div class="box">
+          <div>AutoComplete : </div><input type="text" list="fruits" required>
+          <datalist id="fruits">
+            <option value="apple" label="りんご">
+            <option value="orange" label="オレンジ">
+            <option value="grape" label="ぶどう">
+          </datalist>
+        </div>
+        <input type="submit">
+      </form>
+    </section>
+    <section>
+      <h2>OUTPUT</h2>
+      <form name="form" onsubmit="return false">
+        <input name="value1" type="number"> +
+        <input name="value2" type="number"> =
+        <output name="out" onforminput="value = +(value1.value) + +(value2.value)"></output>
+      </form>
+    </section>
+    <section>
+      <h2>progress</h2>
+      <progress value="0.8" max="1"></progress>
+    </section>
+    <section>
+      <h2>meter</h2>
+      <meter id="meter" title="ギガバイト" max="1500" min="0" value="750" low="150" height="1350"></meter>
+    </section>
+
+    <script src="./js/jquery-1.11.3.min.js"></script>
+    <script>
+
+    </script>
+  </body>
+</html>

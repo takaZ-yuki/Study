@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>HTML5学習</title>
+  <script>
+    var MYORIGIN = location.protocol + "//" + location.host;
+    //var MYORIGIN = location.protocol + "///" + 'C:/Users/yuki/Desktop/syudy/html5/frame_sub.html';
+    //var MYORIGIN = './frame_sub.html';
+    function init() {
+      var iframe = document.getElementsByTagName('iframe')[0];
+      // 1秒ごとに、IFrameに対してメッセージを送信
+      setInterval(function () {
+        // 現在時刻を文字列にする
+        var date = new Date();
+        var datestr = date.getFullYear() + '/' + (date.getMonth() + 1) + '/' + date.getDate() + 
+        ' ' + date.getHours() + ':' + date.getMinutes() + ':' + date.getSeconds();
+        // ランダムで数値を生成
+        var number = Math.floor(Math.random() * 100);
+        // IFrameにメッセージを送信
+        console.log(iframe);
+        console.log(MYORIGIN);
+        iframe.contentWindow.postMessage({
+          'date': datestr,
+          'number': number
+        }, MYORIGIN);
+        document.getElementById('msg').innerHTML = datestr + ' 生成された値は' + number + ' です。';
+      }, 1000);
+    }
+  </script>
+</head>
+<body onload="init();">
+  <div id="msg"></div>
+  <iframe src="./frame_sub.html" width="500" height="200"></iframe>
+</body>
+</html>

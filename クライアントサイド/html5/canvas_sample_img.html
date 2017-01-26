@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HTML5 学習</title>
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <header>
+      <h2>HTML5</h2>
+    </header>
+
+    <section>
+      <canvas id="canvas1" width="300" height="400"></canvas>
+    </section>
+
+    <footer>
+
+    </footer>
+      <script>
+        window.onload = function() {
+          // canvas要素のDOMオブジェクトを取得
+          var canvas = document.getElementById('canvas1');
+          // 描画コンテキストを取得する。
+          var cx = canvas.getContext('2d');
+          // img要素を生成
+          var img = new Image();
+          // 画像の読み込みが終わったら、キャンバスへの書き出しを行う
+          img.onload = function() {
+            // キャンバスいっぱいに画像を表示する。
+            cx.drawImage(img, 0, 0, canvas.width, canvas.height);
+          };
+          // 画像のロードを開始
+          img.src = './img/b_cut008.gif';
+        }
+      </script>
+  </body>
+</html>

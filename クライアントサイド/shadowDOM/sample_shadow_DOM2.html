@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <style>
+    .red {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <button class="red">My Button</button>
+  <script>
+  var button = document.querySelector('button');
+  var root = button.createShadowRoot();
+  root.innerHTML = '<style>' +
+  ':host { text-transform: uppercase;' +
+  'color: black;' +
+  ' }' +
+  '</style>' +
+  '<content></content>';
+  </script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HTML5 学習</title>
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <header>
+      <h2>HTML5</h2>
+    </header>
+
+    <section>
+      <div id="videoDiv">
+        <video id="video1" width="520" height="360" poster="./img/b_cut008.gif">
+          <source src="./media/2014-12-20-01.mp4.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
+          Video tag not supported. Download the video <a href="./movie/waterfall-free-video2.mp4">here</a>.
+        </video>
+        <br>
+        <button id="b1" style="width: 100px; height: 25px;">再生</button>
+      </div>
+    </section>
+
+    <script src="./js/jquery-1.11.3.min.js"></script>
+    <script>
+
+      var video1 = document.getElementById('video1');
+      video1.addEventListener("error", function() {
+        var error = video1.error;
+        switch(error.code) {
+          case 1:
+            alert('ダウンロードが中止されました。');
+            break;
+          case 2:
+            alert('ネットワークのエラーでダウンロードが中止されました。');
+            break;
+          case 3:
+            alert('デコードに失敗しました。');
+            break;
+          case 4:
+            alert('サポートされていないファイル形式です。');
+            break;
+        }
+      }, false);
+
+      video1.addEventListener("progress", function(e) {
+        var $l2 = $('#l2');
+
+        if (video1.networkState == 2) {
+          // ダウンロード済みのバイト数とトータルのバイト数を表示
+          $l2.text('ダウンロード中…[' + e.loaded + '/' + e.total + 'byte ]');
+        } else if (video1.networkState == 3) {
+          $l2.text('ダウンロード済み');
+        }
+      }, false);
+
+
+      jQuery(function($) {
+        $('#b1').on('click', function() {
+          var video = document.getElementById('video1');
+          // varが再生中でない場合
+          if (video.paused) {
+            video.play();
+            $('#b1').text('一時停止');
+          } else {
+            // 一時停止する。
+            video.pause();
+            $('#b1').text('再生');
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

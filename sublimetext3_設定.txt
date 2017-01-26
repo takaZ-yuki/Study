@@ -1,0 +1,176 @@
+
+■Sublime Text 導入手順
+
+１．http://www.sublimetext.com/3 からDL & インストールする。
+２．Package Controlの導入　View > Consoleに下記のスクリプトを貼り付けEnter
+import urllib.request,os; pf ='Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler())); open(os.path.join(ipp, pf),'wb').write(urllib.request.urlopen('http://sublime.wbond.net/'+ pf.replace(' ','%20')).read())
+３．Cnrl + Shift + p で「Command Palette」を開く
+４．「Package Control:Install Package」が下に予測変換で表示されますのでこれを選んでEnterを押下。
+
+参考URL:
+・http://qiita.com/lunatea/items/53f4adcc6ea3f316e781
+・http://webkaru.net/dev/sublime-text-package-control/
+
+■Preferences → Settings User　の設定
+
+{
+	"draw_minimap_border": true,
+	"color_scheme": "Packages/User/SublimeLinter/Monokai (SL).tmTheme",
+	"default_encoding": "UTF-8",
+	"draw_white_space": "all",
+	"font_face": "Myrica M",
+	"font_size": 11,
+	"highlight_line": true,
+	"ignored_packages":
+	[
+		"Vintage"
+	],
+	"indent_guide_options":
+	[
+		"draw_normal",
+		"draw_active"
+	],
+	"show_encoding": true,
+	"show_line_endings": true,
+	"highlight_modified_tabs": true,
+	"tab_size": 2,
+	"ensure_newline_at_eof_on_save": true,
+	"bold_folder_labels": true,
+	"translate_tabs_to_spaces": true
+}
+
+
+
+■Preferences → Settings - More → Syntax Specific　の設定
+{
+  "tab_size": 2
+}
+
+■インストールしたパッケージ
+
+・Goto-CSS-Declaration
+　→HTMLからCSSを探すのは一苦労ですが、これを入れておけば「Comman+→」で一発で所定のCSSにジャンプしてくれる。
+
+・Bracket Highlighter
+　→こちらはタグの開始部分と終了部分をハイライト表示してくれるパッケージ
+
+・AutoFileName
+　→HTML 書いてるときに、 src 属性とかでファイル名を補完してくれる。
+
+・SublimeLinter
+　→構文チェック機能を追加するためのフレームワーク。各言語に対応するためには、それぞれのプラグインを更に追加する。
+
+・SublimeLinter-jshint
+　→JavaScript 用の Linter。 npm install -g jshint で別途 jshint をインストールしておく必要あり。
+
+・Color Highlighter
+　→CSS で指定した色（#fff とか）を選択すると、背景色がその色になる。
+
+・All Autocomplete
+　→オートコンプリート強化。別ファイルからも検索して補完してくれるっぽい。
+
+・RecentActiveFiles
+　→最近閉じたファイルを検索できる。間違えてファイルを閉じた時とか便利。
+
+・OmniMarkupPreviewer
+　→Ctrl + Alt + o で、既定のブラウザを使ってプレビューが表示される。
+
+・Shell Turtlestein
+　→Sublime Text からシェルコマンドを実行できるようになる。
+
+・IMESupport
+　→日本語入力しやすくする
+
+・ConvertToUTF8
+　→Shift_JIS ファイルを表示できるようにする
+
+・TrailingSpaces
+　→全角スペースを表示させる
+
+・BoundKeys
+　→複雑になったショートカットキーを一発確認
+
+・Smart Delete
+　→インデントの付いた行をサクッと削除
+
+・Alignment
+　→インデントの簡単整理
+
+・HTML5
+　→HTML5のハイライトや自動補完が使用可能に
+
+・japanize
+　→Sublime Text 日本語化
+
+・jQuery
+　→jQueryの自動補完
+
+・Tag
+　→閉じタグの自動補完やHTMLの整形
+
+・Terminal
+　→ショートカットキーやコンテキストメニューからコマンドプロンプトを開くことが出来る。
+
+・AngularJS
+　→AngularJSの自動保管
+
+・SideBarEnhancements
+　→Sublime Textのサイドバーのコンテキストメニュー（＝右クリックで出るメニュー）を拡張するパッケージ。
+
+・Sublime Files
+　→Sublime Textでのファイル操作をキーボード主体で行うパッケージがSublime Files
+　　Ctrl＋Alt＋Nキーで、パレットが開き、ディレクトリの移動やファイルの操作、ターミナルの起動が行えるようになる。
+
+・Emmet
+　→HTMLのマークアップをショートハンドの入力で行える
+
+・View In Browser
+　→HTMLソースを編集している画面からブラウザーを起動するパッケージ。デフォルトではCtrl＋Alt＋Vキーでブラウザーが起動する。
+
+・DataConverter
+　→CSV形式のデータをさまざまな形に変換するパッケージ。
+
+・CSS Snippets
+　→CSSのスニペット集
+
+・DocBlockr
+　→関数の引数や返り値の雛形コメントを補完してくれる
+
+・JS Snippets
+　→JSのスニペット集
+
+・SublimeCodeIntel
+　→自作関数・変数・定数の定義元にジャンプする機能を追加するパッケージ
+
+・SublimeLinter-php
+　→PHPの構文エラーをチェックしてくれるLintパッケージ
+
+・TortoiseSVN
+　→Sublime Text上でそのままTortoiseSVNの機能（更新・コミット・ログ閲覧など）を利用することが出来る
+
+・CSS Format
+　→cssを整形してくれる。
+
+・FindKeyConflicts
+　→ショートカットキーのコンフリクトを即座に解決
+
+・Can I Use
+　→ブラウザ対応状況を即チェックできる
+
+・sublime bookmarks
+　→いつでもブックマークに移動できる
+
+・icon fonts
+　→ファイルのフォントを変更
+
+
+
+
+
+パッケージ：
+・http://www.buildinsider.net/small/sublimetext/03
+・http://www.go-next.co.jp/blog/webdesign/soft_tool/7755/
+・http://catcher-in-the-tech.net/1699/
+
+
+

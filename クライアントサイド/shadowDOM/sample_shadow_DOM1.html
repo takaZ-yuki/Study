@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Shadow DOM SAMPLE</title>
+</head>
+<body>
+  <div class="box1">
+    <p style="color: yellow;">SHADOW DOM</p>
+  </div>
+  <script>
+    //var root = document.querySelector('div').createShadowRoot();
+    var root = document.querySelector('.box1').createShadowRoot();
+    root.innerHTML = '<style>p{ color: red; }</style>' +
+                     '<p id="p1" class="p1">Hello Shadow  DOM!!</p>'
+  </script>
+</body>
+</html>

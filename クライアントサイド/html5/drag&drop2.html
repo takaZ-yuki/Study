@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HTML5 学習</title>
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style>
+    </style>
+  </head>
+  <body>
+    <header>
+      <h2>HTML5</h2>
+    </header>
+
+    <section>
+      <h2>LI 交換</h2>
+      <ul id="list1">
+        <li id="apple1" draggable="true">りんご</li>
+        <li id="grape1" draggable="true">ぶどう</li>
+        <li id="orange1"  draggable="true">オレンジ</li>
+      </ul>
+
+      <ul id="list2">
+        <li id="apple2" draggable="true">apple</li>
+        <li id="grape2" draggable="true">grape</li>
+        <li id="orange2" draggable="true">orange</li>
+      </ul>
+
+    </section>
+
+    <section>
+      <div id="dropbox"></div>
+    </section>
+
+    <script src="./js/jquery-1.11.3.min.js"></script>
+    <script>
+      // ulオブジェクトを取得
+      var list1 = document.getElementById('list1');
+      var list2 = document.getElementById('list2');
+
+      // list1のイベントを設定
+      list1.addEventListener('dragstart', handleDragStart, false);
+      list1.addEventListener('dragenter', handleDragEnter, false);
+      list1.addEventListener('dragover', handleDragOver, false);
+      list1.addEventListener('drop', handleDrop, false);
+
+      // list2のイベントを設定
+      list2.addEventListener('dragstart', handleDragStart, false);
+      list2.addEventListener('dragenter', handleDragEnter, false);
+      list2.addEventListener('dragover', handleDragOver, false);
+      list2.addEventListener('drop', handleDrop, false);
+
+      // ドラッグ開始時の処理
+      function handleDragStart(e) {
+        // li要素のみを処理対象とする
+        if (e.target.tagName.toLowerCase() == 'li') {
+          // DataTransferに格納
+          event.dataTransfer.setData('listItemId', e.target.id);
+        } else {
+          // li要素以外の場合は処理をキャンセル
+          e.preventDefault();
+        }
+      }
+
+      function handleDragEnter(e) {
+        // DataTransferに格納されているデータのタイプが
+        // "listItemId"を含む場合のみドラッグを受け付ける
+        var types = e.dataTransfer.types;
+        for (var i = 0; i < types.length; i++) {
+          if (types[i] == 'listItemId') {
+            e.preventDefault();
+            return;
+          }
+        }
+      };
+
+      function handleDragOver(e) {
+        // ドラッグを受けつける為、デフォルト動作をキャンセルする。
+        e.preventDefault();
+      };
+
+      function handleDrop(e) {
+        // ドラッグされたデータ（リスト項目のID）を取得
+        var id = e.dataTransfer.getData('listItemId');
+        var li = document.getElementById(id);
+        // 他方のul要素からli要素を削除し、ドロップ先のul要素へ追加
+        if (li && li.parentNode != e.currentTarget) {
+          li.parentNode.removeChild(li);
+          e.currentTarget.appendChild(li);
+        }
+        // ドロップを処理したら、イベントのパブリングを止める
+        e.stopPropagation();
+      };
+
+      /*
+        dropbox init
+       */
+
+      jQuery(function($) {
+
+        $('#dropbox').on('drop', function(e) {
+          var context = e.dataTransfer.getData('text/plain');
+          
+        });
+
+      });
+
+    </script>
+  </body>
+</html>
