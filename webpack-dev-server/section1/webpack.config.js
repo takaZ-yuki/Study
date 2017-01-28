@@ -16,6 +16,10 @@ module.exports = {
     // Configuration for dev server
     devServer: {
         contentBase: 'dist',
+        progress: true,
+        colors: true,
+        hot: true,
+        inline: true,
         port: 3000
     },
 
