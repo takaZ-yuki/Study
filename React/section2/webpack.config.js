@@ -13,11 +13,22 @@ module.exports = {
     filename: 'bundle.js'
   },
 
+  // webpack-dev-serverの設定
   devServer: {
-    progress: true,
-    colors: true,
-    hot: true,
-    inline: true
+    // キャッシュしない
+    cache: false,
+    // コンテンツルート
+    contentBase: 'dist', 
+    //ホットモードで起動（それ意外あるの？）
+    hot: true, 
+    // iframeモードとinlineモードがある
+    // iframeモード：アプリケーションがiframeを埋め込まれており、余計なヘッダがついてくる
+    // inlineモード：更新でページ再読み込み
+    inline: true, 
+    //出力に色つきにするか
+    colors: true, 
+    //dev-serverのポートの指定 default: 8080
+    port: 8080
   },
 
   module: {
@@ -33,6 +44,9 @@ module.exports = {
       {
         // htmlファイルの読み込み
         test: /\.html?$/,
+        exclude: /node_modules/,
+        loader: 'file-loader',
+        // 出力先のpathは、outputのpathを見てるっぽい
         loader: 'file?name=[path][name].[ext]'
       }
     ]
