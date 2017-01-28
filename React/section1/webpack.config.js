@@ -3,11 +3,17 @@ var path = require('path');
 var webpack = require('webpack');
 
 module.exports = {
-  entry: './src/main.jsx',
-  output: { path: path.join(__dirname, 'dist'), filename: 'bundle.js' },
+  context: path.join(__dirname, 'src'),
+  entry: {
+    jsx: './main.jsx',
+    html: './index.html'
+  },
+  output: {
+    path: path.join(__dirname, 'dist'),
+    filename: 'bundle.js'
+  },
   module: {
-    loaders: [
-      {
+    loaders: [{
         test: /\.js[x]?$/,
         //todo: babel-loaderを調べる
         loader: 'babel-loader',
@@ -15,8 +21,13 @@ module.exports = {
         query: {
           presets: ['es2015', 'react']
         }
+      },
+      {
+        test: /\.html?$/,
+        exclude: /node_modules/,
+        // 出力先のpathは、outputのpathを見てるっぽい
+        loader: 'file?name=[path][name].[ext]'
       }
     ]
   }
 }
-  

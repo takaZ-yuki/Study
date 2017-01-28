@@ -45,7 +45,6 @@ module.exports = {
         // htmlファイルの読み込み
         test: /\.html?$/,
         exclude: /node_modules/,
-        loader: 'file-loader',
         // 出力先のpathは、outputのpathを見てるっぽい
         loader: 'file?name=[path][name].[ext]'
       }
