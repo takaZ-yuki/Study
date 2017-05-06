@@ -1,0 +1,27 @@
+{
+  "name": "section5",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "webpack": "webpack -w",
+    "lite": "lite-server --verbose --open dist",
+    "start": "concurrent \"npm run webpack\" \"npm run lite\""
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4"
+  },
+  "devDependencies": {
+    "babel-core": "^6.24.1",
+    "babel-loader": "^6.4.1",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "concurrently": "^3.4.0",
+    "lite-server": "^2.3.0",
+    "webpack": "^2.4.1"
+  }
+}
