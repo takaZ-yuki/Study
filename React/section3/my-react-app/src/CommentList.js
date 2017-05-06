@@ -2,21 +2,19 @@ import React, {Component} from 'react';
 import Comment from './Comment';
 
 export default class CommentLsit extends Component {
-    constructor(props) {
-        super(props);
+
+    constructor(comment) {
+        this.comment = comment;
     }
 
     render() {
-        let commentNodes = this
-            .props
-            .data
-            .map((comment) => {
-                return (
-                    <Comment author={comment.author} key={comment.id}>
-                        {comment.text}
-                    </Comment>
-                );
-            });
+        this.commentNodes = this.props.data.map(function (comment) {
+            return (
+                <Comment author={comment.author}>
+                    {comment.text}
+                </Comment>
+            );
+        });
 
         return (
             <div className="commentList">

@@ -1,0 +1,18 @@
+// 四則演算
+$value: 200px;
+$sample_color: #111111;
+
+#main {
+    width: $value + 50px;
+    height: $value * 4;
+    border: ($value / 20) solid black;
+    p {
+        color: $sample_color + #333;
+        &::after {
+            content: "sample" + "-test";
+        }
+    }
+    div {
+        color: $sample_color + blue;
+    }
+}

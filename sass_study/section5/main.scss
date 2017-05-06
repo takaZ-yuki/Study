@@ -1,0 +1,25 @@
+// 赤色の変数を宣言
+$red: #cf2d3a;
+
+.notes { 
+    color: $red;
+}
+
+.notesBox {
+    border: 3px double $red;
+}
+
+.item {
+    $value: 15px;
+    margin-left: $value;
+    padding: $value;
+    p {
+        margin-bottom: $value;
+    }
+}
+
+$img_dir: './img/';
+
+#main {
+    background: url(#{$img_dir}sample.png);
+}

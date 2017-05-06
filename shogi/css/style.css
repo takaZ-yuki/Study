@@ -1,0 +1,17 @@
+
+table#stage {
+    margin: 0;
+    padding: 0;
+    border-collapse: collapse;
+    box-sizing: border-box;
+}
+
+table#stage  tr {
+}
+
+table#stage  td {
+    width: 25px;
+    height: 25px;
+    border: 1px solid;
+    text-align: center;
+}

@@ -16,4 +16,4 @@ ReactDOM.render(
   <JquerySample/>, document.querySelector('#jquerySample'));
 
 ReactDOM.render(
-  <CommentBox url="http://localhost:3001/api/comments" pollInterval={2000}/>, document.querySelector('#comment'));
+  <CommentBox />, document.querySelector('#comment'));

@@ -1,0 +1,17 @@
+{
+  "name": "balloonSample",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "yuki <gulgul.groove@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/takaZ-yuki/Study",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

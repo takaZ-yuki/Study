@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>バルーンサンプル</title>
+    <style>
+        #a {
+            background-color: rgba();
+        }
+    </style>
+</head>
+
+<body>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <a id="a" href="#" title="テストだよーーーん">テスト</a>
+
+    <p id="test" title="サンプル" style="width:100px;border: 1px solid black;">test</p>
+
+    <script src="./bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="./jquery.balloon.js/jquery.balloon.min.js"></script>
+    <script>
+        $(function () {
+
+            let clickFlag = false;
+
+            let option = {
+                tipSize: 10,
+                css: {
+                    "border": "solid 2px #FF8888",
+                    "background-color": "rgba(255, 180, 180, 0.9)",
+                    "color": "black"
+                }
+            };
+
+            $('#a').balloon(option);
+
+            $('#test').on('click', function () {
+
+                clickFlag ? $(this).hideBalloon() :  $(this).showBalloon();
+                clickFlag = !clickFlag;
+            }).showBalloon(option);
+
+        });
+    </script>
+</body>
+
+</html>

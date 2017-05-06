@@ -1,0 +1,29 @@
+#main {
+    width: 240px;
+    body.top & {
+        width: 300px;
+    }
+    ul.bnr {
+        margin-top: 10px;
+    }
+    // aタグのやーつ &で親要素を参照
+    a {
+        text-decoration: none;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+    // ページネーションのやーつ
+    ul.pageNav {
+        li {
+            margin: 0;
+            width: 50%;
+            &.prev {
+                float: left;
+            }
+            &.next {
+                float: right;
+            }
+        }
+    }
+}

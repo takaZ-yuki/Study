@@ -1,0 +1,8 @@
+// import
+.oldArea {
+  @import "./sub.scss";
+}
+
+.newArea {
+  @import "./_sub2.scss";
+}

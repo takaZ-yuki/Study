@@ -1,0 +1,17 @@
+#main {
+  width: 250px;
+  height: 800px;
+  border: 10px solid black;
+}
+
+#main p {
+  color: #444444;
+}
+
+#main p::after {
+  content: "sample-test";
+}
+
+#main div {
+  color: #1111ff;
+}
