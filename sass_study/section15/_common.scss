@@ -1,0 +1,4 @@
+// function
+@function halfSize($value) {
+  @return $value / 2;
+}

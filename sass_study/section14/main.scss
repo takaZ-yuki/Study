@@ -1,0 +1,58 @@
+// 関数の利用
+$margin: -15px;
+
+// 絶対値取得
+section {
+  margin-left: $margin;
+  .item {
+    float: left;
+    width: 200px;
+    margin-left: abs($margin);
+  }
+}
+
+$width: 100%;
+
+.baxA {
+  width: $width / 6;
+}
+
+// 四捨五入
+.boxB {
+  widows: round($width / 6);
+}
+// 切り上げ
+.boxC {
+  widows: ceil($width / 6);  
+}
+// 切り捨て
+.boxD {
+  widows: floor($width / 6);  
+}
+
+// 16進数のRGB値に透明感を指定して、RGBA形式に変換できる rgba()
+.body {
+  background: rgba(#6a5468, 0.3);
+}
+
+.bodyA {
+  background: rgba(red, 0.3);
+}
+
+// 明るい色を簡単に作れるlightenと
+// 暗い色を簡単に作れるdarken
+$c: #888;
+.boxE {
+  background: lighten($c, 20%);  
+}
+.boxF {
+  background: darken($c, 20%);  
+}
+
+// 2つのカラーコードの中間色を作れるmix
+$a: #000;
+$d: #fff;
+
+.bodyB {
+  background: mix($a, $d, 50%);    
+}

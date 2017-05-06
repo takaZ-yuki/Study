@@ -1,0 +1,20 @@
+// データタイプの判別
+.DateTypes:after {
+  /* Number型 */
+  content: quote(type-of(10%));
+
+  /* Color型 */
+  content: quote(type-of(red));
+
+  /* String型 */
+  content: quote(type-of(sans-serif));
+
+  /* Boolean型 */
+  content: quote(type-of(true));
+
+  /* List型 */
+  content: quote(type-of(1.5em 1em 0 2em));
+
+  /* null型 */
+  content: quote(type-of(null));
+}

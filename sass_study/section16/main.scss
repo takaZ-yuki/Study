@@ -1,0 +1,34 @@
+// debug
+$value: 500;
+
+@function debugTest() {
+  @debug $value;
+  $value: $value - 100;
+  $value: $value - 100;
+  @debug $value;
+  $value: $value - 100;
+  $value: $value - 100;
+  $value: $value - 100;
+  @debug $value;
+  @return $value + px;
+}
+
+.boxA {
+  width: debugTest();
+}
+
+//warn
+$value2: 1000px;
+@function warnTest() {
+  @if unitless($value2) {
+    $value2: $value2 + px;
+  }
+  @else {
+    @warn "#{$value2}はダメ！$value2には単位は入れないで！";
+  }
+  @return $value2;
+}
+
+.boxB {
+  width: warnTest();
+}

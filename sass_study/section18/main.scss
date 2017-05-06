@@ -1,0 +1,11 @@
+$prefixList: -webkit-, -moz-, -ms-, -o-, null;
+
+@mixin transition($value) {
+  @each $prefix in $prefixList {
+    #{$prefix}transition: $value;
+  }  
+}
+
+a {
+  @include transition(all 0.3s linear);
+}
