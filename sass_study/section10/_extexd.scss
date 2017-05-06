@@ -1,0 +1,29 @@
+// 汎用的なclassを利用するかどうか
+$generalStyle: true;
+$getStyle: 1;
+
+@if $generalStyle {
+  .fl {
+    float: left;
+  }
+  .fr {
+    float: right;
+  }
+}
+
+
+@mixin style {
+  @if $getStyle ==1 {
+    margin: 0 0 30px;
+    padding: 15px;
+    background: #eee;
+  }
+  @else if $getStyle == 2 {
+    margin: 0 10px 15px;
+    padding: 20px 15px;
+    border: 2px solid #333;
+  }
+  @else {
+    margin: 0 0 10px;
+  }
+}

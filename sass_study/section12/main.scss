@@ -1,0 +1,11 @@
+// while サンプル
+$value: 20;
+@while $value > 0 {
+  .mt_#{$value} {
+    margin-top: $value + px;
+  }
+  .mb_#{$value} {
+    margin-bottom: $value + px;
+  }
+  $value: $value - 10;
+}

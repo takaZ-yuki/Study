@@ -1,0 +1,26 @@
+// ミックスインを定義
+@mixin boxset {
+    padding: 15px;
+    background: #999;
+    color: white;
+}
+
+// 引数を使ったミックスインを定義
+@mixin kadomaru($value: 3px) {
+    -moz-border-radius: $value;
+    -webkit-border-radius: $value;
+    border-radius: $value;
+}
+
+// 複数引数を使ったミックスインを定義
+@mixin boxBase($margin: 30px 0, $padding: 10px) {
+    margin: $margin;
+    padding: $padding;
+}
+
+// content
+@mixin hackIE7 {
+  *:first-child + html & {
+    @content;
+  }
+}
