@@ -1,0 +1,251 @@
+
+==================== FINAL INTERFACE ====================
+2017-07-08 06:46:47.8680791 UTC
+
+interface countline-0.1.0.0-IIdbKaYO2I1CVZOE5LW2Wa:Lib 8002
+  interface hash: 9449c72f07c7b10363a04cac7bfc1359
+  ABI hash: 424655c26e2f0582b51d64d38baf71b0
+  export-list hash: 479d3bada6067676eb729c7f015854b4
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: 3c01c5931d407dbd84f671320f5edec2
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Lib.someFunc
+module dependencies:
+package dependencies: base-4.9.1.0* ghc-prim-0.5.0.0
+                      integer-gmp-1.0.0.1
+orphans: base-4.9.1.0:GHC.Base base-4.9.1.0:GHC.Float
+family instance modules: base-4.9.1.0:Control.Applicative
+                         base-4.9.1.0:Data.Either base-4.9.1.0:Data.Functor.Const
+                         base-4.9.1.0:Data.Monoid base-4.9.1.0:Data.Type.Equality
+                         base-4.9.1.0:GHC.Generics base-4.9.1.0:GHC.IO.Exception
+                         base-4.9.1.0:GHC.TypeLits
+import  -/  base-4.9.1.0:Data.Foldable 254e836c2d813d34e47feb29bb8d40ed
+import  -/  base-4.9.1.0:Data.OldList c9282ee91951bdcbd918d2960562c007
+import  -/  base-4.9.1.0:Prelude 74b3e204395920329f6de9d97206abe9
+import  -/  base-4.9.1.0:System.IO 5daf3f384209c11d9566e3409af8ec5d
+import  -/  ghc-prim-0.5.0.0:GHC.Types 89f8de4f08018c9177c98d979eae0e45
+c02b65effc0590b2a5e402ac2ff98b9c
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module Lib.$trModule2 Lib.$trModule1) -}
+fc64708a910392e481f58e7265e9d7c3
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "Lib"#) -}
+6a5aad25f3512ae38032280deba5d305
+  $trModule2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS
+                   "countline-0.1.0.0-IIdbKaYO2I1CVZOE5LW2Wa"#) -}
+9fe1475aec9aed0d67942791f2378674
+  someFunc :: GHC.Types.IO ()
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Lib.someFunc1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R)) -}
+8ca835f8068fd27c9340f704b0c05892
+  someFunc1 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: (\ (s :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case GHC.IO.Handle.Text.hGetContents1
+                        GHC.IO.Handle.FD.stdin
+                        s of ds1 { (#,#) ipv ipv1 ->
+                 case GHC.IO.Handle.Text.hPutStr2
+                        GHC.IO.Handle.FD.stdout
+                        (case GHC.List.$wlenAcc
+                                @ [GHC.Types.Char]
+                                (Data.OldList.lines ipv1)
+                                0# of ww2 { DEFAULT ->
+                         case GHC.Show.$wshowSignedInt
+                                0#
+                                ww2
+                                (GHC.Types.[] @ GHC.Types.Char) of ww4 { (#,#) ww5 ww6 ->
+                         GHC.Types.: @ GHC.Types.Char ww5 ww6 } })
+                        GHC.Types.True
+                        ipv of ds2 { (#,#) ipv2 ipv3 ->
+                 case GHC.IO.Handle.Text.hPutStr2
+                        GHC.IO.Handle.FD.stdout
+                        Lib.someFunc25
+                        GHC.Types.True
+                        ipv2 of ds3 { (#,#) ipv4 ipv5 ->
+                 case GHC.IO.Handle.Text.hPutStr2
+                        GHC.IO.Handle.FD.stdout
+                        Lib.someFunc23
+                        GHC.Types.True
+                        ipv4 of ds4 { (#,#) ipv6 ipv7 ->
+                 case GHC.IO.Handle.Text.hPutStr2
+                        GHC.IO.Handle.FD.stdout
+                        Lib.someFunc13
+                        GHC.Types.True
+                        ipv6 of ds5 { (#,#) ipv8 ipv9 ->
+                 case GHC.IO.Handle.Text.hPutStr2
+                        GHC.IO.Handle.FD.stdout
+                        Lib.someFunc12
+                        GHC.Types.True
+                        ipv8 of ds6 { (#,#) ipv10 ipv11 ->
+                 case GHC.IO.Handle.Text.hPutStr2
+                        GHC.IO.Handle.FD.stdout
+                        Lib.someFunc5
+                        GHC.Types.True
+                        ipv10 of ds7 { (#,#) ipv12 ipv13 ->
+                 case GHC.IO.Handle.Text.hPutStr2
+                        GHC.IO.Handle.FD.stdout
+                        Lib.someFunc12
+                        GHC.Types.True
+                        ipv12 of ds8 { (#,#) ipv14 ipv15 ->
+                 GHC.IO.Handle.Text.hPutStr2
+                   GHC.IO.Handle.FD.stdout
+                   Lib.someFunc2
+                   GHC.Types.True
+                   ipv14 } } } } } } } }) -}
+8bd349f540e10868e96a05e566604d03
+  someFunc10 :: GHC.Integer.Type.Integer
+  {- HasNoCafRefs, Unfolding: (20) -}
+e48d7d4f1365aff4383aa9fd2acf30c4
+  someFunc11 :: GHC.Integer.Type.Integer
+  {- HasNoCafRefs, Unfolding: (10) -}
+c4bf5e89f8f42cfd2ef5b0199b4f28ef
+  someFunc12 :: GHC.Base.String
+  {- Unfolding: (case GHC.Show.$wshowSignedInt
+                        0#
+                        3#
+                        (GHC.Types.[] @ GHC.Types.Char) of ww4 { (#,#) ww5 ww6 ->
+                 GHC.Types.: @ GHC.Types.Char ww5 ww6 }) -}
+dd2ab00b251ae0e1682db34023211fbe
+  someFunc13 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.Types.:
+                   @ GHC.Types.Char
+                   GHC.Show.showList__2
+                   Lib.someFunc14) -}
+6de5ee7c4772d27c27a59c5c8c74dbd7
+  someFunc14 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.Types.:
+                   @ GHC.Types.Char
+                   GHC.Show.shows6
+                   Lib.someFunc15) -}
+870351526050bcb641138af7748ee3ec
+  someFunc15 :: GHC.Base.String
+  {- Unfolding: (GHC.Show.showLitString
+                   Lib.someFunc22
+                   Lib.someFunc16) -}
+a06d5aa5fe4ac4ae3d6e0d62563c9fb8
+  someFunc16 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.Types.:
+                   @ GHC.Types.Char
+                   GHC.Show.shows6
+                   Lib.someFunc17) -}
+9db6f88eda40d656467570d4d2b3d148
+  someFunc17 :: GHC.Base.String
+  {- Unfolding: (Lib.someFunc_showl Lib.someFunc18) -}
+1b3fa077bb2ba648104b3d0dbe7f78d4
+  someFunc18 :: [[GHC.Types.Char]]
+  {- Unfolding: (GHC.Types.:
+                   @ [GHC.Types.Char]
+                   Lib.someFunc21
+                   Lib.someFunc19) -}
+ea82e6e28475bd44ccec34448b18f2d0
+  someFunc19 :: [[GHC.Types.Char]]
+  {- Unfolding: (GHC.Types.:
+                   @ [GHC.Types.Char]
+                   Lib.someFunc20
+                   (GHC.Types.[] @ [GHC.Types.Char])) -}
+0dcae0825e34f3a764470c34f255b536
+  someFunc2 :: GHC.Base.String
+  {- Unfolding: (GHC.Show.showList__
+                   @ [GHC.Types.Char]
+                   GHC.Show.shows_$cshowList1
+                   Lib.someFunc3
+                   (GHC.Types.[] @ GHC.Types.Char)) -}
+02aaf2589435d7e602f1dc1bf76e469c
+  someFunc20 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "poyo"#) -}
+e916a80b6c0380bf87f11476728483a1
+  someFunc21 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "piyo"#) -}
+6749c8b5a95633dfd52c4f80ce3b1ab1
+  someFunc22 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "hoge"#) -}
+6c9b2f9c5cf59df492d46a460cdccbda
+  someFunc23 :: GHC.Base.String
+  {- Unfolding: (case GHC.Show.$w$cshowsPrec1
+                        0#
+                        Lib.someFunc24
+                        (GHC.Types.[] @ GHC.Types.Char) of ww2 { (#,#) ww3 ww4 ->
+                 GHC.Types.: @ GHC.Types.Char ww3 ww4 }) -}
+3758aab26a9a3497db9897d71b17e2d6
+  someFunc24 :: GHC.Integer.Type.Integer
+  {- HasNoCafRefs, Unfolding: (20000000) -}
+d19902f8a341086718a4b0bb4a0d9964
+  someFunc25 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.Types.:
+                   @ GHC.Types.Char
+                   GHC.Show.shows6
+                   Lib.someFunc26) -}
+76249f9447473bf7e1c075810070de30
+  someFunc26 :: GHC.Base.String
+  {- Unfolding: (GHC.Show.showLitString
+                   Lib.someFunc28
+                   Lib.someFunc27) -}
+0f6193e1faf005b5e4194d9bca4c6329
+  someFunc27 :: [GHC.Types.Char]
+  {- HasNoCafRefs,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Types.Char
+                   GHC.Show.shows6
+                   (GHC.Types.[] @ GHC.Types.Char)) -}
+063ea79efb7d17650bd66d5ef49aaece
+  someFunc28 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "SAMPLE"#) -}
+45283546706803d7bed645124aa7a9e3
+  someFunc3 :: [GHC.Base.String]
+  {- Unfolding: (Data.OldList.lines Lib.someFunc4) -}
+fe8a186928fc8168844cd0101d18f2bc
+  someFunc4 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "test\n\
+                   \sample\n\
+                   \hoge"#) -}
+d5c8c26669570ac02ea9f98a1406ed74
+  someFunc5 :: GHC.Base.String
+  {- Unfolding: (GHC.Show.$fShowInteger_$cshowList
+                   Lib.someFunc6
+                   (GHC.Types.[] @ GHC.Types.Char)) -}
+9a5a1c362180cc3ada9921225714c5c3
+  someFunc6 :: [GHC.Integer.Type.Integer]
+  {- HasNoCafRefs,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Integer.Type.Integer
+                   Lib.someFunc11
+                   Lib.someFunc7) -}
+a90bb489a4426983b195e33f8bbcb028
+  someFunc7 :: [GHC.Integer.Type.Integer]
+  {- HasNoCafRefs,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Integer.Type.Integer
+                   Lib.someFunc10
+                   Lib.someFunc8) -}
+7e4887a5b84a17ecc043e20308fc63a7
+  someFunc8 :: [GHC.Integer.Type.Integer]
+  {- HasNoCafRefs,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Integer.Type.Integer
+                   Lib.someFunc9
+                   (GHC.Types.[] @ GHC.Integer.Type.Integer)) -}
+262ee3183ebee6e84a72db4ab75eccb0
+  someFunc9 :: GHC.Integer.Type.Integer
+  {- HasNoCafRefs, Unfolding: (30) -}
+b4cc154756c428c496420affe4a52cd3
+  someFunc_showl :: [[GHC.Types.Char]] -> GHC.Base.String
+  {- Arity: 1, Strictness: <S,1*U> -}
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: safe
+require own pkg trusted: False
+

@@ -1,0 +1,106 @@
+
+==================== FINAL INTERFACE ====================
+2017-07-08 08:13:32.9981741 UTC
+
+interface countbyte-0.1.0.0-Bg3oDlMKl3k6YML6uAIjPr:Lib 8002
+  interface hash: 6a52086ecff530722b744469e72d0c11
+  ABI hash: dc87430e4ee0b946a82a403fbdc4e622
+  export-list hash: 624104714502b3617e4dcd54004ed4a1
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: 3c01c5931d407dbd84f671320f5edec2
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Lib.someFunc
+module dependencies:
+package dependencies: base-4.9.1.0* ghc-prim-0.5.0.0
+                      integer-gmp-1.0.0.1
+orphans: base-4.9.1.0:GHC.Base base-4.9.1.0:GHC.Float
+family instance modules: base-4.9.1.0:Control.Applicative
+                         base-4.9.1.0:Data.Either base-4.9.1.0:Data.Functor.Const
+                         base-4.9.1.0:Data.Monoid base-4.9.1.0:Data.Type.Equality
+                         base-4.9.1.0:GHC.Generics base-4.9.1.0:GHC.IO.Exception
+                         base-4.9.1.0:GHC.TypeLits
+import  -/  base-4.9.1.0:Data.Foldable 254e836c2d813d34e47feb29bb8d40ed
+import  -/  base-4.9.1.0:Prelude 74b3e204395920329f6de9d97206abe9
+import  -/  base-4.9.1.0:System.IO 5daf3f384209c11d9566e3409af8ec5d
+import  -/  ghc-prim-0.5.0.0:GHC.Types 89f8de4f08018c9177c98d979eae0e45
+5365fd8cae95a2bbff1ed91754909a0e
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module Lib.$trModule2 Lib.$trModule1) -}
+fbd9772994dc727108c218c6c7f2dee4
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "Lib"#) -}
+772c652092f585f28b55465d9dbaf8c7
+  $trModule2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS
+                   "countbyte-0.1.0.0-Bg3oDlMKl3k6YML6uAIjPr"#) -}
+924b347be11c02ef54e6d5c7fc5f57b4
+  someFunc :: GHC.Types.IO ()
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Lib.someFunc1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R)) -}
+f84745d53fbccc9bf2d569127804a153
+  someFunc1 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: (\ (s :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case GHC.IO.Handle.Text.hGetContents1
+                        GHC.IO.Handle.FD.stdin
+                        s of ds1 { (#,#) ipv ipv1 ->
+                 case GHC.IO.Handle.Text.hPutStr2
+                        GHC.IO.Handle.FD.stdout
+                        (GHC.Show.$fShow[]_$s$cshow1 ipv1)
+                        GHC.Types.True
+                        ipv of ds2 { (#,#) ipv2 ipv3 ->
+                 case GHC.IO.Handle.Text.hPutStr2
+                        GHC.IO.Handle.FD.stdout
+                        Lib.someFunc2
+                        GHC.Types.True
+                        ipv2 of ds3 { (#,#) ipv4 ipv5 ->
+                 GHC.IO.Handle.Text.hPutStr2
+                   GHC.IO.Handle.FD.stdout
+                   (case GHC.List.$wlenAcc
+                           @ GHC.Types.Char
+                           ipv1
+                           0# of ww2 { DEFAULT ->
+                    case GHC.Show.$wshowSignedInt
+                           0#
+                           ww2
+                           (GHC.Types.[] @ GHC.Types.Char) of ww4 { (#,#) ww5 ww6 ->
+                    GHC.Types.: @ GHC.Types.Char ww5 ww6 } })
+                   GHC.Types.True
+                   ipv4 } } }) -}
+e946d8b92e1f2e5519e37fab1607807b
+  someFunc2 :: GHC.Base.String
+  {- Unfolding: (case Lib.someFunc4
+                        Lib.someFunc3 of ww2 { GHC.Types.I# ww3 ->
+                 case GHC.Show.$wshowSignedInt
+                        0#
+                        ww3
+                        (GHC.Types.[] @ GHC.Types.Char) of ww4 { (#,#) ww5 ww6 ->
+                 GHC.Types.: @ GHC.Types.Char ww5 ww6 } }) -}
+4332f5734bec48678cf221ffb0c3ed79
+  someFunc3 :: GHC.Types.Int
+  {- HasNoCafRefs, Unfolding: (GHC.Types.I# 0#) -}
+0f427e6fb2b15466bac883c0fc2a4822
+  someFunc4 :: GHC.Types.Int -> GHC.Types.Int
+  {- Unfolding: (GHC.CString.unpackFoldrCString#
+                   @ (GHC.Types.Int -> GHC.Types.Int)
+                   "a\n\
+                   \b"#
+                   (GHC.List.lengthFB @ GHC.Types.Char)
+                   (GHC.Base.id @ GHC.Types.Int)) -}
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: safe
+require own pkg trusted: False
+
