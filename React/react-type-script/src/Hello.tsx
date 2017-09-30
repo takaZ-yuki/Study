@@ -19,7 +19,7 @@ export default class Hello extends React.Component<HelloProps, HelloState> {
     this.state = {'name': 'sample', 'age': 20};
   }
 
-  render() {
+  render(): JSX.Element {
     return(
       <h1>Hello from {this.props.compiler} and {this.props.framework} and name {this.state.name} and age {this.state.age}!</h1>
     );
