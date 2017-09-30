@@ -1,0 +1,7 @@
+
+-- ユーザ作成
+create user asp_test_user WITH LOGIN PASSWORD 'asp_test123';
+-- データベース作成
+create database asp_test owner asp_test_user; 
+
+

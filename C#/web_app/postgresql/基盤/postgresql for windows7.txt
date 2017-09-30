@@ -1,0 +1,8 @@
+postgresql for windows7
+
+server name: localhost
+port       : 5432
+database   : postgres
+user ID    : postgres
+password   : postgres123
+
