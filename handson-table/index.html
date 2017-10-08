@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="./bower_components/handsontable/dist/handsontable.full.min.css">
+</head>
+
+<body>
+
+  <input type="text" name="filter" id="filter">
+  <!-- handsontableがバインドされる -->
+  <div id="grid"></div>
+
+  <script src="./bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="./bower_components/handsontable/dist/handsontable.full.min.js"></script>
+  <script>
+    $("#grid").handsontable({
+      startRows: 10,
+      startCols: 10,
+      rowHeaders: true,
+      colHeaders: ["バージョン", "コードネーム", "リリース", "パッケージ数"],
+      minSpareRows: 1,
+      fillHandle: true, //possible values: true, false, "horizontal", "vertical"
+      currentRowClassName: 'currentRow',
+      currentColClassName: 'currentCol',
+      minSpareRows: 1,
+      columnSorting: true,
+      sortIndicator: true,
+      width: 300,
+      height: 300,
+    });
+
+    var data = [
+      [1.1, "buzz", 1996, 474],
+      [1.2, "rex", 1996, 848],
+      [1.3, "bo", 1997, 974],
+      [2.0, "hamm", 1998, 1500],
+      [2.1, "slink", 1999, 2250],
+      [2.2, "potato", 2000, 3900],
+      [3.0, "woody", 2002, 8500],
+      [3.1, "sarge", 2005, 15400],
+      [4.0, "etch", 2007, 18000],
+      [5.0, "lenny", 2009, 28000],
+      [6.0, "squeeze", 2011, 29000],
+      [1.1, "buzz", 1996, 474],
+      [1.2, "rex", 1996, 848],
+      [1.3, "bo", 1997, 974],
+      [2.0, "hamm", 1998, 1500],
+      [2.1, "slink", 1999, 2250],
+      [2.2, "potato", 2000, 3900],
+      [3.0, "woody", 2002, 8500],
+      [3.1, "sarge", 2005, 15400],
+      [4.0, "etch", 2007, 18000],
+      [5.0, "lenny", 2009, 28000],
+      [6.0, "squeeze", 2011, 29000],
+      [7.0, "wheezy", "2013予定", ""]
+    ]
+
+    $("#grid").handsontable("loadData", data);
+
+    $(document).ready(function () {
+      var cols = $(".htCore").find('tbody').find('tr'); //全てのtrを取得
+      console.log(cols);
+      $("input[name='filter']").on("keydown keyup", function () {
+
+        var searchWord = $(this).val(); //検索したいワードを取得
+        reg = new RegExp(searchWord, "g"); //正規表現で変数を扱うための準備
+        cols.each(function (i, val) {
+          var col_text = $(val).children("td").text();
+          if (col_text.match(reg)) {
+            $(val).show(); //該当項目を表示
+          } else {
+            $(val).hide(); //該当しない項目を非表示
+          }
+        })
+      });
+    })
+  </script>
+</body>
+
+</html>
