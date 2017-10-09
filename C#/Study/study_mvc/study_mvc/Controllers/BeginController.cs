@@ -1,10 +1,13 @@
-﻿using System.Web.Mvc;
+﻿using study_mvc.Models;
+using System.Web.Mvc;
 
 namespace study_mvc.Controllers
 {
     public class BeginController : Controller
     {
-        
+
+        private MvcBasicContext db = new MvcBasicContext();
+
         // GET: Begin
         public ActionResult Index()
         {
@@ -17,6 +20,11 @@ namespace study_mvc.Controllers
             ViewBag.Message = "こんにちは、世界！";
 
             return View();
+        }
+
+        public ActionResult List()
+        {
+            return View(db.Members);
         }
     }
 }
