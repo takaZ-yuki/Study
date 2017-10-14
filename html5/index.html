@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+  <title>HTML5</title>
+  <style>
+    li {
+      color: red;
+      background: blue;
+    }
+    .box {
+      width: 200px;
+      height: 200px;
+      border: 1px solid;
+    }
+  </style>
+</head>
+<body itemscope="itemscope" itemtype="http://schema.org/WebPage">
+  <header id="header" >
+    <h1 itemprop="name">HTML5</h1>
+  </header><!-- /header -->
+  <section>
+    <h3 itemprop="title">テキスト書き込めるDIV</h3>
+    <div class="box" itemprop="text" contenteditable="true" >
+    </div>
+  </section>
+
+
+  <section>
+    <h3 itemprop="title">折り畳み</h3>
+    <details itemprop="profile">
+      <summary itemprop="name">
+        <ruby>髙澤
+          <rt>たかざわ</rt>
+        </ruby>
+      </summary>
+      <p itemprop="birthday">
+        <mark>生年月日：</mark>
+        <time datetime="1991-01-16">1991年1月16日</time>
+      </p>
+    </details>
+  </section>
+
+  <section>
+    <h3 itemprop="title">IFRAME</h3>
+    <iframe itemprop="frame" src="sub.html" sandbox></iframe>
+    <iframe itemprop="frame" src="sub.html" seamless></iframe>
+  </section>
+
+  <section>
+    <h3>カスタムデータ</h3>
+    <p id="p1" data-test="TESTTEST">TESTTEST</p>
+    <input type="button" name="b1" id="b1" value="押してね">
+  </section>
+
+  <section>
+    <menu type="context">
+      <li>
+        <menu type="コマンドA">
+          <button type="button">コマンド1</button>
+          <button type="button">コマンド2</button>
+          <button type="button">コマンド3</button>
+        </menu>
+      </li>
+      <li>
+        <menu type="コマンドB">
+          <button type="button">コマンド1</button>
+          <button type="button">コマンド2</button>
+          <button type="button">コマンド3</button>
+        </menu>
+      </li>
+    </menu>
+    <br>
+    <menu type="toolbar">
+      <li>
+        <menu type="edit">
+          <button type="button">コマンド1</button>
+          <button type="button">コマンド2</button>
+          <button type="button">コマンド3</button>
+        </menu>
+      </li>
+      <li>
+        <menu type="info">
+          <button type="button">コマンド1</button>
+          <button type="button">コマンド2</button>
+          <button type="button">コマンド3</button>
+        </menu>
+      </li>
+    </menu>
+  </section>
+
+  <footer>
+  </footer>
+  <script>
+    var b1 = document.getElementById('b1');
+    b1.addEventListener('click', function () {
+      var p = document.getElementById('p1');
+      alert(p.dataset.test);
+    });
+
+  </script>
+</body>
+</html>

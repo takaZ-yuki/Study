@@ -1,0 +1,6 @@
+
+■helloメソッドにアクセス
+http://localhost:8080/WebServicesExample/hello.ws
+
+■helloのWSDLにアクセス
+http://localhost:8080/WebServicesExample/hello.ws?wsdl

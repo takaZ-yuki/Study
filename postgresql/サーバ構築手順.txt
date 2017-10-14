@@ -1,0 +1,17 @@
+【前提条件】
+OS: CentOS7
+環境: Windows10(host) -> vagrantでCentOS7（ゲスト）
+
+
+1 yum -y install postgresql-server
+
+
+
+
+
+
+
+
+
+
+参考URL: https://qiita.com/LowSE01/items/84af05449f96dedd0edc

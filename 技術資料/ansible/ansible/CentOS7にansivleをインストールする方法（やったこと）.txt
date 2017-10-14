@@ -1,0 +1,105 @@
+﻿【vagrant のセットアップ】
+■必要なアプリ
+　　・VirtualBox   https://www.virtualbox.org/
+　　・Vagrant      https://www.vagrantup.com/
+　　・Tera Term    https://osdn.jp/projects/ttssh2/
+
+■Vagrant手順
+　　※事前に上記アプリをインストールしておくこと。
+　　　→ vagrant がインストールされているかの確認　コマンド：vagrant -v
+
+　　１．Vagrant用のフォルダを作成（作業フォルダ）
+      [コマンド]
+      cd c:\
+      mkdir vagrant_work
+      cd c:\vagrant_work
+
+　　２．vox をダウンロードする。（おそらくスナップショット）　boxがいくつか置いて： http://www.vagrantbox.es/
+　　　　→コマンド：vagrant box add [box名（任意）] [boxのダウンロード先]
+      [コマンド]
+      vagrant box add centos7 https://github.com/holms/vagrant-centos7-box/releases/download/7.1.1503.001/CentOS-7.1.1503-x86_64-netboot.box
+
+　　３．boxがダウンロードされているか確認する。
+　　　　→コマンド：vagrant box list
+
+　　４．作業フォルダ上でコンソールを起動
+        （もう既に作業フォルダ上）
+
+　　５．vagrantfileの作成/初期化
+　　　→コマンド：vagrant init [box名]
+　　　　これで、vagrantfileが作成される。
+      [コマンド]
+      vagrant init centos7
+
+    ６．vagrantfileを変更
+      以下に変更
+
+      Vagrant.configure(2) do |config|
+
+        config.vm.define :httpd do |node|
+          node.vm.box = "centos7"
+          node.vm.network :forwarded_port, guest: 22, host: 2001, id: "ssh"
+          node.vm.network :private_network, ip: "192.168.33.10"
+        end
+
+      end
+
+    ７．共有フォルダのマウントに失敗したので下記プラグインをインストール
+      [コマンド]
+      vagrant plugin install vagrant-vbguest
+
+　　８．作業フォルダ上にplaybookを作成
+        下記内容を「httpd-playbook.yml」で作成
+        ---
+        - hosts: local
+          become: yes
+          tasks:
+            - name: Apacheをインストール
+              yum: name=httpd state=installed
+            - name: Apacheサービスを起動 ＆ 自動起動化
+              service: name=httpd state=started enabled=yes
+            - name: Fire Wallの80番ポートを開ける
+              firewalld: port=80/tcp permanent=true state=enabled
+            - name: Fire Wallを再起動
+              service: name=firewalld state=restarted
+
+　　９．仮想マシンを起動
+　　　→コマンド：vagrant up
+
+
+
+
+■centos7にansibleをinstallする方法（最新版のansibleをinstallする場合は、pipを使ってください。）
+１．sudo yum install -y epel-release
+２．sudo yum install -y sshpass → epelリポジトリ内のパッケージを取得する
+３．sudo yum install -y ansible → epelリポジトリ内のパッケージを取得する
+４．ansible --version → 入っているか確認する。
+
+■実行方法
+１．ssh vagrant@127.0.0.1
+２．sudo vi hosts → ansibleが見えるようにhostsに設定する。
+　→今回は、自分自身に設定するので下記を記載。（127.0.0.1 → localhostでもいいのかも）
+
+[local]
+127.0.0.1
+
+３．ansible -i hosts all -m ping --ask-pass → 疎通確認（パスワードは、ログインパスワード）
+４．ansible -i hosts all -a 'uname -r' ※１
+５．ansible-playbook -i hosts /vagrant/httpd-playbook.yml --syntax-check → syntax checkを実行 ※１
+６．ansible-playbook -i hosts /vagrant/httpd-playbook.yml --ask-pass → 実行
+７．sudo rm -rf /var/www/html
+８．sudo ln -fs /vagrant /var/www/html
+
+※１ 確認の必要がなければ飛ばして良い
+
+
+■参考URL
+http://centos.sabakan.red/entry/2015/07/01/140000
+http://yteraoka.github.io/ansible-tutorial/
+http://www.bunkei-programmer.net/entry/2015/02/15/181514
+
+■vagrant上のhtml フォルダを共有フォルダにする方法
+http://kiraba.jp/2015/08/18/1200525501
+
+■共有フォルダのマウントに失敗する時
+http://qiita.com/akippiko/items/278efedee35661634b85

@@ -14,13 +14,16 @@ import urllib.request,os; pf ='Package Control.sublime-package'; ipp = sublime.i
 ■Preferences → Settings User　の設定
 
 {
-	"draw_minimap_border": true,
+	"bold_folder_labels": true,
 	"color_scheme": "Packages/User/SublimeLinter/Monokai (SL).tmTheme",
 	"default_encoding": "UTF-8",
+	"draw_minimap_border": true,
 	"draw_white_space": "all",
+	"ensure_newline_at_eof_on_save": true,
 	"font_face": "Myrica M",
 	"font_size": 11,
 	"highlight_line": true,
+	"highlight_modified_tabs": true,
 	"ignored_packages":
 	[
 		"Vintage"
@@ -32,12 +35,14 @@ import urllib.request,os; pf ='Package Control.sublime-package'; ipp = sublime.i
 	],
 	"show_encoding": true,
 	"show_line_endings": true,
-	"highlight_modified_tabs": true,
+	"shift_tab_unindent": true,
 	"tab_size": 2,
-	"ensure_newline_at_eof_on_save": true,
-	"bold_folder_labels": true,
+	//オートコンプリート機能を有効
+  "auto_complete": true,
 	"translate_tabs_to_spaces": true
 }
+
+
 
 
 
@@ -45,6 +50,13 @@ import urllib.request,os; pf ='Package Control.sublime-package'; ipp = sublime.i
 {
   "tab_size": 2
 }
+
+■Preferences → Package Settings → Terminal → Settings - User　の設定（コマンドプロンプトに変更）
+{
+    "terminal": "cmd",
+    "parameters": ["/k", "chcp", "65001"]
+}
+
 
 ■インストールしたパッケージ
 
@@ -163,8 +175,8 @@ import urllib.request,os; pf ='Package Control.sublime-package'; ipp = sublime.i
 ・icon fonts
 　→ファイルのフォントを変更
 
-
-
+・SublimergePro
+　→Diffを取るやつ
 
 
 パッケージ：

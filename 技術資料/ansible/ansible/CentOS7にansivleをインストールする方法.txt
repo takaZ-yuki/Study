@@ -1,0 +1,34 @@
+■centos7にansibleをinstallする方法（最新版のansibleをinstallする場合は、pipを使ってください。）
+１．sudo yum install -y epel-release
+２．sudo yum install -y sshpass → epelリポジトリ内のパッケージを取得する
+３．sudo yum install -y ansible → epelリポジトリ内のパッケージを取得する
+４．ansible --version → 入っているか確認する。
+
+■実行方法
+１．ssh vagrant@127.0.0.1
+２．sudo vi hosts → ansibleが見えるようにhostsに設定する。
+　→今回は、自分自身に設定するので下記を記載。（127.0.0.1 → localhostでもいいのかも）
+
+[local]
+127.0.0.1
+
+３．ansible -i hosts all -m ping --ask-pass → 疎通確認（パスワードは、ログインパスワード）
+４．ansible -i hosts all -a 'uname -r' ※１
+５．ansible-playbook -i hosts [playbook_name] --syntax-check → syntax checkを実行 ※１
+６．ansible-playbook -i hosts [playbook_name] --list-tasks → 実行するタスクの確認 ※１
+７．ansible-playbook -i hosts [playbook_name] --check --ask-pass →  実際に実行するとこうなるという出力がされる ※１
+８．ansible-playbook -i hosts [playbook_name] --ask-pass → 実行
+
+※１ 確認の必要がなければ飛ばして良い
+
+
+■参考URL
+http://centos.sabakan.red/entry/2015/07/01/140000
+http://yteraoka.github.io/ansible-tutorial/
+http://www.bunkei-programmer.net/entry/2015/02/15/181514
+
+■vagrant上のhtml フォルダを共有フォルダにする方法
+http://kiraba.jp/2015/08/18/1200525501
+
+■共有フォルダのマウントに失敗する時
+http://qiita.com/akippiko/items/278efedee35661634b85

@@ -1,0 +1,8 @@
+■Atom アンインストー方法
+
+1.コントロールパネルの「プログラムと機能」でアンインストール
+2.以下のフォルダを削除
+　・C:\Users\[user_name]\.atom
+　・C:\Users\[user_name]\AppData\Local\atom
+　・C:\Users\[user_name]\AppData\Roaming\Atom
+

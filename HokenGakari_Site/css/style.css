@@ -1,0 +1,44 @@
+/*
+Theme Name: 2015年3月2日（グッズフラッシュ追加）
+Author: のんびり屋
+*/
+
+* { margin: 0; padding: 0; border: 0; outline: 0; list-style: none; }
+html { overflow-y: scroll; }
+body { text-align: center; font-size: 13px; color: #333; line-height: 1.7; font-family:"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif; -webkit-text-size-adjust: none; }
+img { vertical-align: middle; }
+table { border-collapse: collapse; }
+a { color: #369; }
+a:hover, .o { color: #369 !important; }
+
+#header { width: 920px; margin: 0 auto; position: relative; }
+#header li { display: inline; }
+#nav { border-top: 1px solid #ccc; border-bottom: 1px solid #ccc; padding: 20px 0; }
+#nav li { border-left: 1px solid #ccc; }
+#nav li:first-child { border: 0; }
+#nav li a { padding: 0 11px; color: #333; text-decoration: none; }
+#icon { position: absolute; top: 40px; right: 0; }
+#icon img { vertical-align: baseline; margin-left: 9px; }
+#icon-text { position: absolute; top: 15px; right: 0; width: 280px; font-size: 12px; color: #666; text-align: center; }
+
+#main { width: 960px; margin: 0 auto; }
+#main > div { padding: 20px; text-align: left; box-sizing: border-box; }
+
+#menu ul { text-align: right; }
+#menu li { display: inline; }
+#menu li a { background: #eee; padding: 5px 15px; margin-left: 5px; text-decoration: none; }
+#menu li.this a { background: #666; color: #fff; }
+#menu li.this a:hover { color: #fff !important; }
+
+h2 { font-size: 16px; background: #666; color: #fff; padding: 3px 5px; margin-bottom: 10px; }
+
+.article { clear: both; }
+.article h3 { font-size: 16px; border-bottom: 5px solid #eee; text-align: left; padding: 5px 0; }
+.article p { padding: 20px 0 40px; text-align: left; }
+.article p strong em { color: #f00; font-style: normal; }
+.article .new { color: #fc0; padding: 10px; }
+
+#footer { text-align: center; clear: both; padding: 20px 20px 40px; }
+#footer a { color: #999; text-decoration: none; }
+#footer #pagetop { text-align: right; }
+#footer #copy { text-align: center; }

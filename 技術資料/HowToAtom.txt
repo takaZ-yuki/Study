@@ -1,5 +1,5 @@
 
-■How To Atom
+■Atom ショートカットキー
 
 ・対応する括弧、タグに飛ぶ
 → Ctrl + m

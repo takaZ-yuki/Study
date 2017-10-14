@@ -28,10 +28,10 @@
 　→ Ctrl + Shift + d
 
 ・大文字 → 小文字に変換
-　→ Ctrl + k -> u
+　→ Ctrl + k -> Ctrl + u
 
 ・小文字 → 大文字に変換
-　→ Ctrl + k -> l
+　→ Ctrl + k -> Ctrl + l
 
 ・辞書の順番で行ソート
 　→ F9
@@ -63,8 +63,14 @@
 ・ウインドウ上下左右分割
 　→ Alt + Shift + 5
 
+・タブフォーカスを変更
+　→ Alt + Shift + <タブ番号>
+
 ・ウインドウフォーカス移動
 　→ Ctrl + <ウィンドウ番号>
+
+・コマンドプロンプトを起動（terminalパッケージ導入後別途設定が必要）
+　→ Ctrl + Shift + t
 
 参考URL：
 ・http://liginc.co.jp/designer/archives/6774

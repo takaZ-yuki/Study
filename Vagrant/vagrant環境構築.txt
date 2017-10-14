@@ -1,0 +1,10 @@
+①Virtual boxをインストール
+　URL: https://www.virtualbox.org/
+②Vagrantをインストールする
+　URL: https://www.vagrantup.com/downloads.html
+③Vagrant-Windowsプラグインを導入する（OSがWindowsの場合のみ）
+  コマンド: vagrant plugin install vagrant-windows
+④BOXのインストール
+　URL: http://www.vagrantbox.es/
+
+参考URL：http://tech.nitoyon.com/ja/blog/2014/02/20/vagrant-win-guest/

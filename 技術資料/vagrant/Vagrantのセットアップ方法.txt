@@ -1,0 +1,69 @@
+﻿■Vagrantのセットアップ方法
+
+　●必要なアプリ
+　　・VirtualBox   https://www.virtualbox.org/
+　　・Vagrant      https://www.vagrantup.com/
+　　・WinSCP       https://osdn.jp/projects/winscp/wiki/FrontPage
+　　・Tera Term    https://osdn.jp/projects/ttssh2/
+
+
+　●Vagrant手順
+　　※事前に上記アプリをインストールしておくこと。
+　　　→ vagrant がインストールされているかの確認　コマンド：vagrant -v
+
+　　１．Vagrant用のフォルダを作成（作業フォルダ）
+
+　　２．vox をダウンロードする。（おそらくスナップショット）　boxがいくつか置いて： http://www.vagrantbox.es/
+　　　　→コマンド：vagrant box add [box名（任意）] [boxのダウンロード先]
+
+　　３．boxがダウンロードされているか確認する。
+　　　　→コマンド：vagrant box list
+
+　　４．作業フォルダ上でコンソールを起動
+
+　　５．vagrantfileの作成/初期化
+　　　→コマンド：vagrant init [box名]
+　　　　これで、vagrantfileが作成される。
+
+　　６．仮想マシンを起動
+　　　→コマンド：vagrant up
+
+
+　　備考．
+　　・スリープ
+　　　→vagrant suspend
+
+　　・スリープ復帰
+　　　→vagrant resume
+
+　　・終了
+　　　→vagrant halt
+
+　　・再起動
+　　　→vagrant reload
+
+　　・仮想マシンを削除
+　　　→vagrant destroy
+
+　　・IPを固定
+　　　→Vagrant fileの下記部分のコメントアウトを外す。
+　　　　# config.vm.network :private_network, ip: "192.168.33.10"
+　　　　
+　　　　・接続ユーザ
+　　　　ID　　： vagrant
+　　　　パス　： vagrant
+
+
+
+■Vagrantって何？
+　→ローカル環境（VirtualBox上）にお手軽に仮想環境を構築出来るようになる
+
+
+■boxって何？
+　→仮想環境のテンプレート（レシピみたいなもの）
+　　
+■参考URL
+http://zuqqhi2.com/vagrant-ansible
+
+■共有フォルダのマウントに失敗する時
+http://qiita.com/akippiko/items/278efedee35661634b85

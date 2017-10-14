@@ -1,0 +1,25 @@
+﻿【vagrant上に作成したgitリポジトリにアクセスする方法】
+
+１．vagrant上にcentos7を作成する。(ip : 192.168.33.14)
+２．teratermでcentos7にアクセス
+３．sudo yum install git
+４．git config --global user.name git
+５．git config --global user.email git@git.git
+６．git congig --global color.ui true
+７．git init --bare --shared
+
+
+vagrant@192.168.33.14:/git_rep/
+
+
+
+参考URL：
+・windowsにgitをインストール
+http://opcdiary.net/?page_id=27065
+
+・windowsにTortoiseGitをインストール
+http://www.backlog.jp/git-guide/intro/intro2_1.html
+
+・なんか色々な説明
+http://tracpath.com/bootcamp/learning_git_for_beginner.html
+http://itmemo.net-luck.com/linux-centos-git-install/
