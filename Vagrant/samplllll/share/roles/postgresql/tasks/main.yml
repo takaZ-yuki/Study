@@ -1,0 +1,43 @@
+  - name: install postgresql
+    yum: name={{ item }} state=latest
+    with_items:
+      - postgresql-server
+      - postgresql-devel
+      - postgresql-contrib
+      - python-psycopg2
+
+  - name: postgresql initdb
+    shell: service postgresql initdb
+
+  - name: start postgresql
+    service: name=postgresql state=started  enabled=yes
+
+  - name: vagrant user sudores
+    lineinfile: 
+      dest: /etc/sudoers.d/vagrant 
+      owner: root
+      group: root
+      mode: 0440
+      line: "%vagrant ALL=(vagrant) NOPASSWD: ALL"
+      state: present
+      create: yes
+      validate: "visudo -cf %s"
+
+  - name : create database
+    postgresql_db: 
+      name: "{{ dbname }}"
+      encoding: "UTF-8"
+      login_user: vagrant
+    sudo_user: vagrant
+    sudo: yes
+
+  - name: create user
+    postgresql_user: 
+      db: "{{ dbname }}"
+      name: "{{ dbuser }}"
+      password: "{{ dbpass }}"
+      priv: ALL
+      state: present
+      login_user: vagrant
+    sudo_user: vagrant
+    sudo: yes

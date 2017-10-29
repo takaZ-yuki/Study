@@ -1,0 +1,8 @@
+version: "9.5"
+rpmurl:
+  redhat: "http://yum.postgresql.org/{{ version }}/redhat/rhel-7-x86_64/pgdg-centos95-{{ version }}-2.noarch.rpm"
+package_name: "postgresql95"
+user: "vagrant"
+dbuser: "sample_user"
+dbpass: "sample123"
+dbname: "sample_db"

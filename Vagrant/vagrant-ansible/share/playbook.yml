@@ -1,0 +1,17 @@
+---
+- hosts: all
+  become: yes
+  user: "vagrant"
+  roles:
+    - init
+    - system
+    - lamp
+    - pg
+    - ruby
+    - redmine
+    - apache
+
+  post_tasks:
+    - name: 完了
+      debug:
+        msg='インストールが完了しました。 http://{{ ansible_default_ipv4.address }}/redmine/ にアクセスしてください。'

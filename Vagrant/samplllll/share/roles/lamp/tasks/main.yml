@@ -1,0 +1,49 @@
+    #
+    # Apache
+    #
+    - name: Apache インストール
+      yum: name=httpd
+
+    - name: Apache 起動
+      service: name=httpd state=started enabled=yes
+
+    - name: .htaccessを有効にする
+      replace:
+        dest=/etc/httpd/conf/httpd.conf
+        regexp='AllowOverride None'
+        replace='AllowOverride All'
+      notify:
+        - restart httpd
+
+    #
+    # PHP
+    #
+    - name: PHPをインストール
+      yum: name={{item}}
+      with_items:
+        - php
+        - php-mbstring
+        - php-mysql
+
+    - name: PHPをタイムゾーンの設定
+      replace: >
+        dest=/etc/php.ini
+        regexp="^;date\.timezone ="
+        replace="date.timezone = Asia/Tokyo"
+
+    #
+    # MySQL 5.7
+    #
+    - name: MariaDB 削除
+      yum: name=mariadb-libs state=removed
+
+    - name: MySQL5.7 リポジトリ追加
+      command: >
+        yum -y install http://dev.mysql.com/get/mysql57-community-release-el7-7.noarch.rpm
+        creates=/etc/yum.repos.d/mysql-community.repo
+
+    - name: MySQL5.7 インストール
+      yum: name=mysql-community-server
+
+    - name: MySQL5.7 起動
+      service: name=mysqld state=started enabled=yes

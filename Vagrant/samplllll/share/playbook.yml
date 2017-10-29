@@ -1,0 +1,9 @@
+---
+- hosts: all
+  become: yes
+  user: "vagrant"
+  roles:
+    - init
+    - selinux
+    - postgresql
+    - lamp

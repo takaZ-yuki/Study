@@ -1,0 +1,18 @@
+# ===================
+# SELinuxを無効化する(selinux.yml)
+# ===================
+# ===================
+# すべてのサーバのSELinuxを無効化する
+# ===================
+  - name: Install libselinux-python
+    yum: name=libselinux-python state=present
+
+  - name: SELinuxのDisable設定
+    selinux: state=disabled
+
+  - name: DeveloperTool インストール
+    yum: name="@Development tools"
+
+  - name: vim インストール
+    yum: name=vim
+

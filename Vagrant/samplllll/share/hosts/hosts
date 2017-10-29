@@ -1,0 +1,8 @@
+[server1]
+192.168.33.10
+
+[local:children]
+server1
+
+[local:vars]
+ansible_connection=local
