@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .hidden-area {
+            clear: both;
+            content: "";
+            display: block;
+            height: 0 !important;
+            visibility: hidden !important;
+            width: 0 !important;
+        }
+
+        #fd_display {
+            width: 800px;
+            height: 600px;
+            text-align: center;
+            margin: auto;
+            position: relative;
+            border: 1px solid #ccc;
+        }
+
+        #jMenu {
+            width: 150px;
+            background: #fff;
+            border: 1px solid #444;
+        }
+
+        #jMenu ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        #jMenu li {
+            width: 150px;
+            margin: 0;
+            border: 1px solid #444;
+        }
+
+        #jMenu ul li:hover {
+            background: #666;
+            color: #fff;
+        }
+
+        #jMenu li:hover span,
+        #jMenu li:hover a {
+            color: #fff;
+        }
+
+        #jMenu a {
+            width: 150px;
+            height: 28px;
+            display: block;
+            color: #000;
+            font-weight: bold;
+            text-decoration: none;
+            padding-top: 6px;
+            padding-bottom: 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 独自のコンテキストメニューを表示するエリア -->
+    <div id='fd_display'></div>
+
+    <!-- クラス　hidden-area'　でコンテキストメニューはデフォルトで非表示状態にしておきます -->
+    <div id='jMenu' class='hidden-area'>
+        <ul>
+            <li>
+                <a href='#' id='tag_edit' no=''>編集</a>
+            </li>
+            <li>
+                <a href='#' id='tag_del' no=''>削除</a>
+            </li>
+        </ul>
+    </div>
+
+    
+    <script>
+        // デフォルトのコンテキストメニューを非表示にしておく
+        $(document).on("contextmenu", "#fd_display", function (e) {
+            return false;
+            // 特定の領域を右クリックした時にコンテキストメニューを表示
+        }).on("rightClick", "#fd_display", function (e) {
+
+            // ここでは、右クリックした画像の属性値(alt)にIDが設定されていることを想定
+            // IDをコンテキストメニューのリンクの属性値に反映して
+            // クリックした対象のデータに対するイベントが実行できるようにしています
+            var no = $(this).attr("alt");
+            $("#jMenu a").attr("alt", no);
+
+            // 右クリックされたら非表示のクラスを除去し、カーソルの位置にメニューを表示します
+            // 表示する要素（#fd_displayは、position:relatibe; を設定しておきます）
+            $("#jMenu").removeClass("hidden-area").css({
+                top: e.pageY + "px",
+                left: e.pageX + "px",
+                position: "absolute",
+                opacity: 0.8,
+                zIndex: 2000
+            });
+
+            // メニューを以外をクリックしたらコンテキストメニューは隠します
+        }).on("click", document, function (e) {
+
+            $("#jMenu").addClass("hidden-area");
+
+        });
+    </script>
+
+</body>
+
+</html>

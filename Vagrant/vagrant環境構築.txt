@@ -1,10 +1,10 @@
-‡@Virtual box‚ğƒCƒ“ƒXƒg[ƒ‹
-@URL: https://www.virtualbox.org/
-‡AVagrant‚ğƒCƒ“ƒXƒg[ƒ‹‚·‚é
-@URL: https://www.vagrantup.com/downloads.html
-‡BVagrant-Windowsƒvƒ‰ƒOƒCƒ“‚ğ“±“ü‚·‚éiOS‚ªWindows‚Ìê‡‚Ì‚İj
-  ƒRƒ}ƒ“ƒh: vagrant plugin install vagrant-windows
-‡CBOX‚ÌƒCƒ“ƒXƒg[ƒ‹
-@URL: http://www.vagrantbox.es/
+â‘ Virtual boxã‚’ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«
+ã€€URL: https://www.virtualbox.org/
+â‘¡Vagrantã‚’ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«ã™ã‚‹
+ã€€URL: https://www.vagrantup.com/downloads.html
+â‘¢Vagrant-Windowsãƒ—ãƒ©ã‚°ã‚¤ãƒ³ã‚’å°å…¥ã™ã‚‹ï¼ˆOSãŒWindowsã®å ´åˆã®ã¿ï¼‰
+  ã‚³ãƒãƒ³ãƒ‰: vagrant plugin install vagrant-windows
+â‘£BOXã®ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«
+ã€€URL: http://www.vagrantbox.es/
 
-QlURLFhttp://tech.nitoyon.com/ja/blog/2014/02/20/vagrant-win-guest/
+å‚è€ƒURLï¼šhttp://tech.nitoyon.com/ja/blog/2014/02/20/vagrant-win-guest/
